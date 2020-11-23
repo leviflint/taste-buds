@@ -14,7 +14,7 @@ public class Pairings {
     @GeneratedValue
     @Id
     private Long id;
-    @ManyToMany (mappedBy = "pairings")
+    @ManyToMany
     private Set<Ingredient> ingredients;
 
     public Pairings(String pairing) {
