@@ -1,4 +1,4 @@
-package com.tastebuds.webapp;
+package com.tastebuds.webapp.resources;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +17,7 @@ public class Pairings {
     @ManyToMany (mappedBy = "pairings")
     private Set<Ingredient> ingredients;
 
-    public Pairings(String pairing, Long id) {
+    public Pairings(String pairing) {
         this.pairing = pairing;
         this.id = id;
     }

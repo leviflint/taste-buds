@@ -1,7 +1,5 @@
-package com.tastebuds.webapp;
+package com.tastebuds.webapp.resources;
 
-
-import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,7 +17,7 @@ public class Ingredient {
     @ManyToMany(mappedBy = "ingredients")
     private Set<Pairings> pairings;
 
-    public Ingredient(String ingredient, Long id) {
+    public Ingredient(String ingredient) {
         this.ingredient = ingredient;
         this.id = id;
     }
