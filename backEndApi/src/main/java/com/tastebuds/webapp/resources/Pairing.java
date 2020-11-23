@@ -8,7 +8,7 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-public class Pairings {
+public class Pairing {
 
     private String pairing;
     @GeneratedValue
@@ -17,12 +17,12 @@ public class Pairings {
     @ManyToMany
     private Set<Ingredient> ingredients;
 
-    public Pairings(String pairing) {
+    public Pairing(String pairing) {
         this.pairing = pairing;
         this.id = id;
     }
 
-    protected Pairings(){
+    protected Pairing(){
     }
 
     public String getPairing() {
@@ -41,9 +41,9 @@ public class Pairings {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Pairings pairings = (Pairings) o;
-        return Objects.equals(pairing, pairings.pairing) &&
-                Objects.equals(id, pairings.id);
+        Pairing pairing1 = (Pairing) o;
+        return Objects.equals(pairing, pairing1.pairing) &&
+                Objects.equals(id, pairing1.id);
     }
 
     @Override
@@ -53,9 +53,10 @@ public class Pairings {
 
     @Override
     public String toString() {
-        return "Pairings{" +
+        return "Pairing{" +
                 "pairing='" + pairing + '\'' +
                 ", id=" + id +
+                ", ingredients=" + ingredients +
                 '}';
     }
 }

@@ -15,7 +15,7 @@ public class Ingredient {
     @Id
     private Long id;
     @ManyToMany(mappedBy = "ingredients")
-    private Set<Pairings> pairings;
+    private Set<Pairing> pairings;
 
     public Ingredient(String ingredient) {
         this.ingredient = ingredient;
@@ -33,7 +33,7 @@ public class Ingredient {
         return id;
     }
 
-    public Set<Pairings> getPairings() {
+    public Set<Pairing> getPairings() {
         return pairings;
     }
 
