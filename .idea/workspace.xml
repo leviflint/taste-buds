@@ -23,7 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7dac9e04-410d-4fce-bbaa-da5807c67234" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/tastebuds/webapp/JPAWiringTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backEndApi/src/test/java/com/tastebuds/webapp/Ingredient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEndApi/src/main/java/com/tastebuds/webapp/WebAppApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEndApi/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEndApi/src/test/java/com/tastebuds/webapp/WebAppApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tastebuds/webapp/JPAWiringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEndApi/src/test/java/com/tastebuds/webapp/JPAWiringTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +65,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user2020\code\taste-buds-taste-buds\backEndApi" />
+      <recent name="C:\Users\user2020\code\taste-buds-taste-buds\src" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.tastebuds.webapp" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -91,7 +105,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606149992946</updated>
-      <workItem from="1606149994240" duration="122000" />
+      <workItem from="1606149994240" duration="558000" />
     </task>
     <servers />
   </component>
@@ -108,5 +122,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2581" y="104" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606150466157">
+      <screen x="1920" y="-219" width="1920" height="1040" />
+    </state>
+    <state x="2581" y="104" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.-219.1920.1040@1920.-219.1920.1040" timestamp="1606150466157" />
+    <state x="2657" y="197" width="445" height="214" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1606150380321">
+      <screen x="1920" y="-219" width="1920" height="1040" />
+    </state>
+    <state x="2657" y="197" width="445" height="214" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824/1920.-219.1920.1040@1920.-219.1920.1040" timestamp="1606150380321" />
   </component>
 </project>
