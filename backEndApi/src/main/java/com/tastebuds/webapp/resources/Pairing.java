@@ -1,5 +1,7 @@
 package com.tastebuds.webapp.resources;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,6 +17,7 @@ public class Pairing {
     @Id
     private Long id;
     @ManyToMany
+    @JsonIgnore
     private Set<Ingredient> ingredients;
 
     public Pairing(String pairing, Ingredient...ingredients) {

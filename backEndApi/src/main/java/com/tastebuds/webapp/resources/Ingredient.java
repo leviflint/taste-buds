@@ -3,10 +3,7 @@ package com.tastebuds.webapp.resources;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.Objects;
 import java.util.Set;
 
@@ -17,7 +14,8 @@ public class Ingredient {
     @Id
     private Long id;
     @ManyToMany(mappedBy = "ingredients")
-    @JsonIgnore
+//    @JoinTable
+//    @JsonIgnore
     private Set<Pairing> pairings;
 
     public Ingredient(String ingredient) {
