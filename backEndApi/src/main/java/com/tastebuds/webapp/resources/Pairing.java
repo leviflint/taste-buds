@@ -17,9 +17,9 @@ public class Pairing {
     @ManyToMany
     private Set<Ingredient> ingredients;
 
-    public Pairing(String pairing) {
+    public Pairing(String pairing, Ingredient...ingredients) {
         this.pairing = pairing;
-        this.id = id;
+        this.ingredients = Set.of(ingredients);
     }
 
     protected Pairing(){

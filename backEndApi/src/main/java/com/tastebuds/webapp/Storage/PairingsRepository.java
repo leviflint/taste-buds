@@ -1,4 +1,4 @@
-package com.tastebuds.webapp;
+package com.tastebuds.webapp.Storage;
 
 import com.tastebuds.webapp.resources.Pairing;
 import org.springframework.data.repository.CrudRepository;
