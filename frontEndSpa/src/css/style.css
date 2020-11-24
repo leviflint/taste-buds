@@ -56,7 +56,6 @@ h4 {
 }
 
 .search {
-    display: flex;
     border: solid;
     border-width: 15px;
     border-color: var(--acid);
