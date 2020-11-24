@@ -11,17 +11,20 @@ font-family: 'Pacifico', cursive; */
     --orange: rgb(255, 127, 17);
     --red: rgb(255, 27, 28);
     --beige: rgb(226, 232, 206);
-    --teal: rgb(40, 144, 158);
+    --teal: rgb(59, 210, 230);
     --laurel: rgb(197, 218, 188);
+    --white: rgb(255, 255, 255);
+    --acid: rgb(189, 191, 9);
+    --purple: rgb(209, 56, 191);
 }
 header{
     font-family: 'Pacifico', cursive;
-    /* font-size: 4em; */
     font-size: 8vw;
     text-align: center;
-    background-color: var(--black);
-    color: rgb(68, 221, 241);
-    text-shadow: 4px 4px 6px var(--teal, 1)
+    color: var(--black);
+    background-image: linear-gradient(rgba(8, 8, 8, 0.705), rgba(255, 255, 255, 0.308));
+    text-shadow: 4px 4px 6px var(--teal, 1);
+
 }
 .container{
     background-color: var(--black);
@@ -29,32 +32,33 @@ header{
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 25px;
     text-align: center;
-    
+    background-image: url("https://i.pinimg.com/originals/f9/74/3b/f9743be631250c58db95c3c6442e9634.png");
+    background-repeat: cover;
 }
 h3{
-    color: var(--red);
+    color: var(--orange);
     font-size: 1.8em;
     padding-bottom: 15px;
 }
 h4{
-    color: var(--red);
+    color: var(--orange);
     font-weight: 900;
     font-size: 1.5em;
 }
 .search{
     border: solid;
-    border-width: 10px;
-    border-color: var(--laurel);
+    border-width: 15px;
+    border-color: var(--acid);
     border-radius: 20px;
-    background-color: var(--beige);
-    width: 50%;
+    background-color: var(--white);
+    width: 70%;
     justify-self: center;
     align-self: center;
 
 }
 
 .food-search{
-    background-color: var(--beige);
+    background-color: var(--white);
     border: none;
     font-size: 2em;
     text-align: center;
@@ -64,7 +68,7 @@ h4{
 }
 
 .food-search-button{
-    background-color: var(--beige);
+    background-color: var(--white);
     border: none;
     font-size: 1.25em;
     text-align: center;
@@ -72,7 +76,7 @@ h4{
 }
 
 .filter-button{
-    background-color: var(--beige);
+    background-color:  rgb(122, 217, 230);
     color: var(--black);
     font-family: 'Darker Grotesque', sans-serif;
     border-radius: 5px;
@@ -82,36 +86,36 @@ h4{
     border-width: 4px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    /* border-color: var(--red); */
     outline: none;
 }
 
 .filter-button:active{
     background-color: var(--black);
-    color: var(--beige);
+    color:  rgb(122, 217, 230);
 }
 
 .suggested-pairings{
     border: solid;
-    border-width: 10px;
-    border-color: var(--beige);
-    background-color: var(--laurel);
+    border-width: 15px;
+    border-color: var(--teal);
+    background-color: var(--white);
     border-radius: 20px;
-    width: 50%;
+    width: 60%;
     justify-self: center;
     align-self: center;
+    font-weight: 700;
 }
 
 .flavor-affinities{
     border: solid;
-    border-width: 10px;
+    border-width: 15px;
     border-radius: 20px;
-    border-color: var(--laurel);
-    background-color: var(--beige);
-    width: 50%;
+    border-color: var(--acid);
+    background-color: var(--white);
+    width: 60%;
     justify-self: center;
     align-self: center;
-    /* box-shadow: 0px 8px 16px 0px var(--beige, .2); */
+    font-weight: 600;
 }
 
 li{
@@ -126,4 +130,5 @@ a{
 
 footer{
     color: var(--orange);
+    font-weight: 600;
 }
