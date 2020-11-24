@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&family=Pacifico&display=swap');
+/* font-family: 'Darker Grotesque', sans-serif;
+font-family: 'Pacifico', cursive; */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --black: rgb(38, 38, 38);
+    --orange: rgb(255, 127, 17);
+    --red: rgb(255, 27, 28);
+    --beige: rgb(226, 232, 206);
+    --teal: rgb(59, 210, 230);
+    --laurel: rgb(197, 218, 188);
+    --white: rgb(255, 255, 255);
+    --acid: rgb(189, 191, 9);
+    --purple: rgb(209, 56, 191);
+}
+header{
+    font-family: 'Pacifico', cursive;
+    font-size: 8vw;
+    text-align: center;
+    color: var(--black);
+    background-image: linear-gradient(rgba(8, 8, 8, 0.705), rgba(255, 255, 255, 0.308));
+    text-shadow: 4px 4px 6px var(--teal, 1);
+
+}
+.container{
+    background-color: var(--black);
+    color: var(--red);
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    background-image: url("https://i.pinimg.com/originals/f9/74/3b/f9743be631250c58db95c3c6442e9634.png");
+    background-repeat: cover;
+}
+h3{
+    color: var(--orange);
+    font-size: 1.8em;
+    padding-bottom: 15px;
+}
+h4{
+    color: var(--orange);
+    font-weight: 900;
+    font-size: 1.5em;
+}
+.search{
+    border: solid;
+    border-width: 15px;
+    border-color: var(--acid);
+    border-radius: 20px;
+    background-color: var(--white);
+    width: 70%;
+    justify-self: center;
+    align-self: center;
+
+}
+
+.food-search{
+    background-color: var(--white);
+    border: none;
+    font-size: 2em;
+    text-align: center;
+    outline: none;
+    width: 65%;
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+.food-search-button{
+    background-color: var(--white);
+    border: none;
+    font-size: 1.25em;
+    text-align: center;
+    outline: none;
+}
+
+.filter-button{
+    background-color:  rgb(122, 217, 230);
+    color: var(--black);
+    font-family: 'Darker Grotesque', sans-serif;
+    border-radius: 5px;
+    font-size: 1.2em;
+    padding: 0 5px;
+    margin: 5px;
+    border-width: 4px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.filter-button:active{
+    background-color: var(--black);
+    color:  rgb(122, 217, 230);
+}
+
+.suggested-pairings{
+    border: solid;
+    border-width: 15px;
+    border-color: var(--teal);
+    background-color: var(--white);
+    border-radius: 20px;
+    width: 60%;
+    justify-self: center;
+    align-self: center;
+    font-weight: 700;
+}
+
+.flavor-affinities{
+    border: solid;
+    border-width: 15px;
+    border-radius: 20px;
+    border-color: var(--acid);
+    background-color: var(--white);
+    width: 60%;
+    justify-self: center;
+    align-self: center;
+    font-weight: 600;
+}
+
+li{
+    list-style: none;
+    
+}
+
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+footer{
+    color: var(--orange);
+    font-weight: 600;
+}
