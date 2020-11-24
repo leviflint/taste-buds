@@ -1,0 +1,10 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    grid-template-rows: .5fr .8fr 1fr .25fr;
+    row-gap: 10px;
+}
