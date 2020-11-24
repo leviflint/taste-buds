@@ -20,14 +20,11 @@ public class IngredientController {
     @GetMapping ("/api/ingredient/{id}")
     public Ingredient retrieveIngredientById(@PathVariable Long id){
         return ingredientStorage.retrieveIngredientById(id);
-
-
     }
     @GetMapping ("/api/pairing/{id}")
     public Pairing retrievePairingById(@PathVariable Long id){
         return pairingStorage.retrievePairingById(id);
-
-
     }
+
 
 }
