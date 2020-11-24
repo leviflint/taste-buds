@@ -19,4 +19,9 @@ public class PairingStorage {
     public Pairing retrievePairingById(Long id) {
         return pairingRepo.findById(id).get();
     }
+
+    public Iterable<Pairing> showIngredients(){
+        return pairingRepo.findAll();
+
+    }
 }

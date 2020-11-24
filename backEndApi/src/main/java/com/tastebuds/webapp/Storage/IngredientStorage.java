@@ -18,4 +18,8 @@ public class IngredientStorage {
     public Ingredient retrieveIngredientById(Long id) {
         return ingredientRepo.findById(id).get();
     }
+
+    public Iterable<Ingredient> retrieveAllIngredients() {
+        return ingredientRepo.findAll();
+    }
 }
