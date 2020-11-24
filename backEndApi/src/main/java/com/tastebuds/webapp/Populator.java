@@ -25,18 +25,18 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception{
-        Ingredient chicken = new Ingredient("chicken");
-        ingredientStorage.saveIngredient(chicken);
-        Ingredient salt = new Ingredient("salt");
-        ingredientStorage.saveIngredient(salt);
-        Ingredient pepper = new Ingredient("pepper");
-        ingredientStorage.saveIngredient(pepper);
-        Pairing lemon = new Pairing("lemon", chicken);
-        pairingStorage.savePairing(lemon);
-        Pairing caramel = new Pairing("caramel", salt);
-        pairingStorage.savePairing(caramel);
-        Pairing garlic = new Pairing("garlic", chicken, salt, pepper);
-        pairingStorage.savePairing(garlic);
+//        Ingredient chicken = new Ingredient("chicken");
+//        ingredientStorage.saveIngredient(chicken);
+//        Ingredient salt = new Ingredient("salt");
+//        ingredientStorage.saveIngredient(salt);
+//        Ingredient pepper = new Ingredient("pepper");
+//        ingredientStorage.saveIngredient(pepper);
+//        Pairing lemon = new Pairing("lemon", chicken);
+//        pairingStorage.savePairing(lemon);
+//        Pairing caramel = new Pairing("caramel", salt);
+//        pairingStorage.savePairing(caramel);
+//        Pairing garlic = new Pairing("garlic", chicken, salt, pepper);
+//        pairingStorage.savePairing(garlic);
 
 
     }

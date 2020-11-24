@@ -28,7 +28,7 @@ public class JPAWiringTest {
     }
     @Test
     public void shouldSaveAndRetrieveIngredientObjects() {
-        Ingredient testIngredient = new Ingredient("Lemon");
+        Ingredient testIngredient = new Ingredient("Lemon", "1", "2", "3");
         ingredientRepo.save(testIngredient);
         flushClear();
         Ingredient retrievedIngredient = ingredientRepo.findById(testIngredient.getId()).get();
@@ -36,7 +36,7 @@ public class JPAWiringTest {
     }
     @Test
     public void ingredientsHaveManyPairings() {
-        Ingredient testIngredient = new Ingredient("chicken");
+        Ingredient testIngredient = new Ingredient("chicken","1","2","3");
         ingredientRepo.save(testIngredient);
         Pairing testPairing1 = new Pairing("salt", testIngredient);
         pairingRepo.save(testPairing1);
@@ -49,9 +49,9 @@ public class JPAWiringTest {
     }
     @Test
     public void paringsCanHaveManyIngredients(){
-        Ingredient testIngredient = new Ingredient("toast");
+        Ingredient testIngredient = new Ingredient("toast","1","2","3");
         ingredientRepo.save(testIngredient);
-        Ingredient testIngredient2 = new Ingredient("cinnamon");
+        Ingredient testIngredient2 = new Ingredient("cinnamon","1","2","3");
         ingredientRepo.save(testIngredient2);
         Pairing testPairing1 = new Pairing("butter", testIngredient, testIngredient2);
         pairingRepo.save(testPairing1);
