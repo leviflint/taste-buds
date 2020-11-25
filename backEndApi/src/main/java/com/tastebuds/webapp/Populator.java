@@ -31,13 +31,13 @@ public class Populator implements CommandLineRunner {
         ingredientStorage.saveIngredient(salmon);
         Ingredient steak = new Ingredient("steak", "ketchup, cheese whiz, cheetos", "baked potatoes, broccoli, mushrooms", "shrimp, linguine, olive oil");
         ingredientStorage.saveIngredient(steak);
+
+
         Pairing lemon = new Pairing("lemon", chicken, salmon);
         pairingStorage.savePairing(lemon);
         Pairing teriyakiSauce = new Pairing("teriyaki sauce", salmon, chicken, steak);
         pairingStorage.savePairing(teriyakiSauce);
         Pairing garlic = new Pairing("garlic", chicken, salmon, steak);
         pairingStorage.savePairing(garlic);
-
-
     }
 }

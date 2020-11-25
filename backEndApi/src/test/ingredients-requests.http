@@ -15,3 +15,7 @@ Content-Type: application/json
 {"ingredient":"chicken", "affinity1":"garlic, pasta, pesto","affinity2":"rice, beans, cheese","affinity3":"spinach, strawberry, poppy seed dressing"}
 
 
+### Show Ingredients associated with Pairing
+GET http://localhost:8080/api/pairing/4/ingredient
+
+

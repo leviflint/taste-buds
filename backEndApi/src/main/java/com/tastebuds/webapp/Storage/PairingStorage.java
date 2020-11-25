@@ -20,8 +20,5 @@ public class PairingStorage {
         return pairingRepo.findById(id).get();
     }
 
-    public Iterable<Pairing> showIngredients(){
-        return pairingRepo.findAll();
 
-    }
 }
