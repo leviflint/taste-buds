@@ -1,5 +1,4 @@
 const allIngredients = [ {
-    
     "ingredient": "chicken",
     "id": 1,
     "pairings": [
