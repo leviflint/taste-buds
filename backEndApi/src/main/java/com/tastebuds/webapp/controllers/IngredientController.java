@@ -32,8 +32,4 @@ public class IngredientController {
         return ingredientStorage.retrieveAllIngredients();
     }
 
-
-
-
-
 }
