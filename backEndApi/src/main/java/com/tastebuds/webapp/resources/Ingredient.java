@@ -13,6 +13,8 @@ public class Ingredient {
     @GeneratedValue
     @Id
     private Long id;
+    @ManyToMany (mappedBy = "ingredients")
+    private Set<PairingClass> pairingClasses;
     @ManyToMany(mappedBy = "ingredients")
     private Set<Pairing> pairings;
     private String affinity1;
