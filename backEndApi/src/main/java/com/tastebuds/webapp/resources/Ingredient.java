@@ -13,8 +13,6 @@ public class Ingredient {
     @GeneratedValue
     @Id
     private Long id;
-    @ManyToMany (mappedBy = "ingredients")
-    private Set<PairingClass> pairingClasses;
     @ManyToMany(mappedBy = "ingredients")
     private Set<Pairing> pairings;
     private String affinity1;
@@ -56,6 +54,7 @@ public class Ingredient {
         return affinity3;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -78,7 +77,6 @@ public class Ingredient {
         return "Ingredient{" +
                 "ingredient='" + ingredient + '\'' +
                 ", id=" + id +
-                ", pairings=" + pairings +
                 ", affinity1='" + affinity1 + '\'' +
                 ", affinity2='" + affinity2 + '\'' +
                 ", affinity3='" + affinity3 + '\'' +

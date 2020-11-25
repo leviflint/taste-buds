@@ -18,4 +18,7 @@ Content-Type: application/json
 ### Show Ingredients associated with Pairing
 GET http://localhost:8080/api/pairing/4/ingredient
 
+### Show all Pairings by name
+GET http://localhost:8080/api/pairings/lemon
+
 

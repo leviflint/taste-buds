@@ -1,11 +1,9 @@
 package com.tastebuds.webapp;
 
 import com.tastebuds.webapp.Storage.IngredientRepository;
-import com.tastebuds.webapp.Storage.PairingClassRepository;
 import com.tastebuds.webapp.Storage.PairingsRepository;
 import com.tastebuds.webapp.resources.Ingredient;
 import com.tastebuds.webapp.resources.Pairing;
-import com.tastebuds.webapp.resources.PairingClass;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -22,7 +20,7 @@ public class JPAWiringTest {
     private TestEntityManager entityManager;
     @Autowired
     private PairingsRepository pairingRepo;
-    private PairingClassRepository pairingClassRepo;
+
 
 
     private void flushClear() {
@@ -41,17 +39,12 @@ public class JPAWiringTest {
     public void ingredientsHaveManyPairings() {
         Ingredient testIngredient = new Ingredient("chicken","1","2","3");
         ingredientRepo.save(testIngredient);
-        PairingClass salt = new PairingClass("salt");
-        pairingClassRepo.save(salt);
-        Pairing testPairing1 = new Pairing(salt, "salt", 2,testIngredient);
+        Pairing testPairing1 = new Pairing("salt", 2,testIngredient);
         pairingRepo.save(testPairing1);
-        PairingClass pepper = new PairingClass("pepper");
-        pairingClassRepo.save(pepper);
-        Pairing testPairing2 = new Pairing(pepper, "pepper", 2, testIngredient);
+        Pairing testPairing2 = new Pairing( "pepper", 2, testIngredient);
         pairingRepo.save(testPairing2);
         flushClear();
         Ingredient retrieveIngredient = ingredientRepo.findById(testIngredient.getId()).get();
-
         assertThat(retrieveIngredient.getPairings()).contains(testPairing1, testPairing2);
     }
     @Test
@@ -60,9 +53,7 @@ public class JPAWiringTest {
         ingredientRepo.save(testIngredient);
         Ingredient testIngredient2 = new Ingredient("cinnamon","1","2","3");
         ingredientRepo.save(testIngredient2);
-        PairingClass butter = new PairingClass("butter");
-        pairingClassRepo.save(butter);
-        Pairing testPairing1 = new Pairing(butter, "butter",3, testIngredient, testIngredient2);
+        Pairing testPairing1 = new Pairing( "butter",3, testIngredient, testIngredient2);
         pairingRepo.save(testPairing1);
         flushClear();
         Pairing retrievePairings = pairingRepo.findById(testPairing1.getId()).get();

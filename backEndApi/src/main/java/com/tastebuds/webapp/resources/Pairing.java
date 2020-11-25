@@ -10,9 +10,8 @@ import java.util.Set;
 public class Pairing {
 
 
-    @ManyToOne
-    private PairingClass pairingClass;
-    private String pairing;
+
+    private String name;
     private int textStyle;
     @GeneratedValue
     @Id
@@ -21,9 +20,8 @@ public class Pairing {
     @JsonIgnore
     private Set<Ingredient> ingredients;
 
-    public Pairing(PairingClass pairingClass, String pairing, int textStyle, Ingredient...ingredients) {
-        this.pairingClass = pairingClass;
-        this.pairing = pairing;
+    public Pairing(String name, int textStyle, Ingredient... ingredients) {
+        this.name = name;
         this.textStyle = textStyle;
         this.ingredients = Set.of(ingredients);
     }
@@ -32,12 +30,9 @@ public class Pairing {
     }
 
 
-    public PairingClass getPairingClass() {
-        return pairingClass;
-    }
 
-    public String getPairing() {
-        return pairing;
+    public String getName() {
+        return name;
     }
 
     public int getTextStyle() {
@@ -58,21 +53,19 @@ public class Pairing {
         if (o == null || getClass() != o.getClass()) return false;
         Pairing pairing1 = (Pairing) o;
         return textStyle == pairing1.textStyle &&
-                Objects.equals(pairingClass, pairing1.pairingClass) &&
-                Objects.equals(pairing, pairing1.pairing) &&
+                Objects.equals(name, pairing1.name) &&
                 Objects.equals(id, pairing1.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(pairingClass, pairing, textStyle, id);
+        return Objects.hash(name, textStyle, id);
     }
 
     @Override
     public String toString() {
         return "Pairing{" +
-                "pairingClass=" + pairingClass +
-                ", pairing='" + pairing + '\'' +
+                ", name='" + name + '\'' +
                 ", textStyle=" + textStyle +
                 ", id=" + id +
                 '}';
