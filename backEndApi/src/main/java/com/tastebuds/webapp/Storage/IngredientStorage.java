@@ -22,4 +22,8 @@ public class IngredientStorage {
     public Iterable<Ingredient> retrieveAllIngredients() {
         return ingredientRepo.findAll();
     }
+
+    public Ingredient findIngredientByName(String name){
+        return ingredientRepo.findByIngredient(name);
+    }
 }

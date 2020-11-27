@@ -32,4 +32,8 @@ public class IngredientController {
         return ingredientStorage.retrieveAllIngredients();
     }
 
+    @GetMapping("/api/ingredient-name/{name}")
+    public Ingredient retrieveIngredientByName(@PathVariable String name) {
+        return ingredientStorage.findIngredientByName(name);
+    }
 }

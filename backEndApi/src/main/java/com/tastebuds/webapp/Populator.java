@@ -33,9 +33,9 @@ public class Populator implements CommandLineRunner {
         ingredientStorage.saveIngredient(steak);
 
 
-        Pairing boldLemon = new Pairing("lemon", 1,  chicken);
+        Pairing boldLemon = new Pairing("lemon", 1,  chicken, salmon);
         pairingStorage.savePairing(boldLemon);
-        Pairing normalLemon = new Pairing( "lemon",3,  salmon);
+        Pairing normalLemon = new Pairing( "lemon",3,  salmon, steak);
         pairingStorage.savePairing(normalLemon);
 
 
