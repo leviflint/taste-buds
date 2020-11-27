@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&family=Pacifico&display=swap');
+
 /* font-family: 'Darker Grotesque', sans-serif;
 font-family: 'Pacifico', cursive; */
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-:root{
+
+:root {
     --black: rgb(38, 38, 38);
     --orange: rgb(255, 127, 17);
     --red: rgb(255, 27, 28);
@@ -17,35 +20,42 @@ font-family: 'Pacifico', cursive; */
     --acid: rgb(189, 191, 9);
     --purple: rgb(209, 56, 191);
 }
-header{
+
+header {
     font-family: 'Pacifico', cursive;
     font-size: 8vw;
     text-align: center;
     color: var(--black);
     background-image: linear-gradient(rgba(8, 8, 8, 0.705), rgba(255, 255, 255, 0.308));
     text-shadow: 4px 4px 6px var(--teal, 1);
-
 }
-.container{
-    background-color: var(--black);
+
+body {
+    background: url("../img/tasteBudsBKG.png");
+    background-size: contain;
+}
+
+.container {
     color: var(--red);
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 25px;
     text-align: center;
-    background-image: url("https://i.pinimg.com/originals/f9/74/3b/f9743be631250c58db95c3c6442e9634.png");
-    background-repeat: cover;
+    height: 100vh;
 }
-h3{
+
+h3 {
     color: var(--orange);
     font-size: 1.8em;
     padding-bottom: 15px;
 }
-h4{
+
+h4 {
     color: var(--orange);
     font-weight: 900;
     font-size: 1.5em;
 }
-.search{
+
+.search {
     border: solid;
     border-width: 15px;
     border-color: var(--acid);
@@ -54,20 +64,20 @@ h4{
     width: 70%;
     justify-self: center;
     align-self: center;
-
+    justify-content: center;
 }
 
-.food-search{
+.food-search {
     background-color: var(--white);
     border: none;
     font-size: 2em;
     text-align: center;
     outline: none;
-    width: 65%;
+    width: 40%;
     font-family: 'Darker Grotesque', sans-serif;
 }
 
-.food-search-button{
+.food-search-button {
     background-color: var(--white);
     border: none;
     font-size: 1.25em;
@@ -75,8 +85,12 @@ h4{
     outline: none;
 }
 
-.filter-button{
-    background-color:  rgb(122, 217, 230);
+.search-term {
+    display: none;
+}
+
+.filter-button {
+    background-color: rgb(122, 217, 230);
     color: var(--black);
     font-family: 'Darker Grotesque', sans-serif;
     border-radius: 5px;
@@ -87,14 +101,15 @@ h4{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     outline: none;
+    display: none;
 }
 
-.filter-button:active{
+.filter-button:active {
     background-color: var(--black);
-    color:  rgb(122, 217, 230);
+    color: rgb(122, 217, 230);
 }
 
-.suggested-pairings{
+.suggested-pairings {
     border: solid;
     border-width: 15px;
     border-color: var(--teal);
@@ -104,9 +119,10 @@ h4{
     justify-self: center;
     align-self: center;
     font-weight: 700;
+    display: none;
 }
 
-.flavor-affinities{
+.flavor-affinities {
     border: solid;
     border-width: 15px;
     border-radius: 20px;
@@ -116,19 +132,23 @@ h4{
     justify-self: center;
     align-self: center;
     font-weight: 600;
+    display: none;
 }
 
-li{
+li {
     list-style: none;
-    
+    display: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--black);
 }
 
-footer{
+footer {
+    background-color: var(--black);
     color: var(--orange);
     font-weight: 600;
+    height: 50px;
+    grid-row-start: 5;
 }
