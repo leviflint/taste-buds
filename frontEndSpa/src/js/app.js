@@ -14,8 +14,8 @@ const filterButtonThree = document.getElementById("filter-button-three");
 const suggestedPairings = document.querySelector(".suggested-pairings");
 
 const foodPairingsUl = document.getElementById("food-pairings");
-
 const foodPairingsLi = document.getElementById("food-pairings-li");
+
 const pairing1 = document.getElementById("pairing-1");
 const pairing2 = document.getElementById("pairing-2");
 const pairing3 = document.getElementById("pairing-3");
@@ -31,77 +31,64 @@ const flavor2 = document.getElementById("flavor-2");
 const flavor3 = document.getElementById("flavor-3");
 const flavor4 = document.getElementById("flavor-4");
 
-// fetch('src/js/sampleIngredientJSON.js')
-// .then (showPairings(response))
-// .catch(showPairings(err));
+const displayPairings = function (ingredients) {
 
-// function showPairings(obj) {
-//     const pairings = obj ['pairings'];
-
-//     for (let  i = 0; i < pairings.length; i++) {
-//         let pairingList = document.createElement("li");
-//         pairingList.id = `pairing-${pairing.id}`;
-//         pairingList.innerText = pairing.pairing;
-//         foodPairingsUl.appendChild(pairingList);
-//     }
-// }
-
-const displayPairings = function (ingredient) {
-    ingredient = foodSearch.value;
-    ingredient.pairings.forEach((pairing) => {
-      if (foodSearch.value == ingredient.ingredient) {
-        let pairingList = document.createElement("li");
-        pairingList.id = `pairing-${pairing.id}`;
-        pairingList.innerText = pairing.pairing;
-        foodPairingsUl.appendChild(pairingList);
-      }
+    ingredients.forEach((ingredient) => {
+      
+      ingredient.pairings.forEach((pairings) => {
+        
+        ingredient = foodSearch.value;
+        console.log(ingredient)
+        const pairingList = document.createElement("li");
+        pairingList.id = `pairing-${pairings.id}`;
+        pairingList.innerText = pairings.name;
+      })
     });
   };
 
 foodSearch.addEventListener("keydown", function (event) {
   if (event.code === "Enter") {
-    searchTerm.innerText = foodSearchValue;
+    searchTerm.innerText = foodSearch.value;
     searchTerm.style.display = "inherit";
 
     filterButtonOne.style.display = "initial";
     filterButtonTwo.style.display = "initial";
     filterButtonThree.style.display = "initial";
-
-    displayPairings();
     suggestedPairings.style.display = "inherit";
-    setTimeout(() => {
-      foodPairingsLi.style.display = "inherit";
-    }, 200);
-    setTimeout(() => {
-      pairing1.style.display = "inherit";
-    }, 400);
-    setTimeout(() => {
-      pairing2.style.display = "inherit";
-    }, 600);
-    setTimeout(() => {
-      pairing3.style.display = "inherit";
-    }, 800);
-    setTimeout(() => {
-      pairing4.style.display = "inherit";
-    }, 1000);
-    setTimeout(() => {
-      pairing5.style.display = "inherit";
-    }, 1200);
-    flavorAffinities.style.display = "inherit";
-    setTimeout(() => {
-      flavorAffinitiesLi.style.display = "inherit";
-    }, 2000);
-    setTimeout(() => {
-      flavor1.style.display = "inherit";
-    }, 2200);
-    setTimeout(() => {
-      flavor2.style.display = "inherit";
-    }, 2400);
-    setTimeout(() => {
-      flavor3.style.display = "inherit";
-    }, 2600);
-    setTimeout(() => {
-      flavor4.style.display = "inherit";
-    }, 2800);
+    foodPairingsUl.append(displayPairings(allIngredients));
+    // setTimeout(() => {
+    //   foodPairingsLi.style.display = "inherit";
+    // }, 200);
+    // setTimeout(() => {
+    //   pairing1.style.display = "inherit";
+    // }, 400);
+    // setTimeout(() => {
+    //   pairing2.style.display = "inherit";
+    // }, 600);
+    // setTimeout(() => {
+    //   pairing3.style.display = "inherit";
+    // }, 800);
+    // setTimeout(() => {
+    //   pairing4.style.display = "inherit";
+    // }, 1000);
+    // setTimeout(() => {
+    //   pairing5.style.display = "inherit";
+    // }, 1200);
+    // flavorAffinities.style.display = "inherit";
+    // setTimeout(() => {
+    //   flavorAffinitiesLi.style.display = "inherit";
+    // }, 2000);
+    // setTimeout(() => {
+    //   flavor1.style.display = "inherit";
+    // }, 2200);
+    // setTimeout(() => {
+    //   flavor2.style.display = "inherit";
+    // }, 2400);
+    // setTimeout(() => {
+    //   flavor3.style.display = "inherit";
+    // }, 2600);
+    // setTimeout(() => {
+    //   flavor4.style.display = "inherit";
+    // }, 2800);
   }
 });
