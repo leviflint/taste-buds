@@ -1,0 +1,26 @@
+### Get all ingredients
+GET localhost:8080/api/ingredients
+Accept: application/json
+
+### Get ingredients by id (also shows pairings)
+GET localhost:8080/api/ingredient/1
+
+### Get Ingredient ny name (also shows pairings)
+GET localhost:8080/api/ingredient-name/salmon
+
+### Post new ingredient
+POST http://localhost:8080/api/ingredient
+Content-Type: application/json
+
+{"ingredient":"chicken", "affinity1":"garlic, pasta, pesto","affinity2":"rice, beans, cheese","affinity3":"spinach, strawberry, poppy seed dressing"}
+
+### Get pairing by id
+GET localhost:8080/api/pairing/4
+
+### Get pairing by id and show ingredients -works
+GET http://localhost:8080/api/pairing/4/ingredient
+
+### Show all Pairings by name
+GET http://localhost:8080/api/pairings/lemon
+
+

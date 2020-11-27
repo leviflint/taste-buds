@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7dac9e04-410d-4fce-bbaa-da5807c67234" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/backEndApi/src/main/java/com/tastebuds/webapp/IngredientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEndApi/src/main/java/com/tastebuds/webapp/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEndApi/src/main/java/com/tastebuds/webapp/resources/Ingredient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEndApi/src/main/java/com/tastebuds/webapp/Pairings.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEndApi/src/main/java/com/tastebuds/webapp/resources/Pairings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEndApi/src/test/java/com/tastebuds/webapp/JPAWiringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEndApi/src/test/java/com/tastebuds/webapp/JPAWiringTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.1\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1khPkSHlPa9qr5GFw26wIwuqiOv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user2020\code\taste-buds-taste-buds\backEndApi" />
+      <recent name="C:\Users\user2020\code\taste-buds-taste-buds\src" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.tastebuds.webapp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="web-app.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tastebuds.webapp.WebAppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7dac9e04-410d-4fce-bbaa-da5807c67234" name="Default Changelist" comment="" />
+      <created>1606149992946</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606149992946</updated>
+      <workItem from="1606149994240" duration="3183000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2581" y="104" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606150466157">
+      <screen x="1920" y="-219" width="1920" height="1040" />
+    </state>
+    <state x="2581" y="104" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.-219.1920.1040@1920.-219.1920.1040" timestamp="1606150466157" />
+    <state x="2685" y="17" key="#com.intellij.ide.util.MemberChooser" timestamp="1606151363712">
+      <screen x="1920" y="-219" width="1920" height="1040" />
+    </state>
+    <state x="2685" y="17" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.-219.1920.1040@1920.-219.1920.1040" timestamp="1606151363712" />
+    <state x="2657" y="197" width="445" height="214" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1606150380321">
+      <screen x="1920" y="-219" width="1920" height="1040" />
+    </state>
+    <state x="2657" y="197" width="445" height="214" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824/1920.-219.1920.1040@1920.-219.1920.1040" timestamp="1606150380321" />
+    <state x="2418" y="-54" key="SettingsEditor" timestamp="1606156171150">
+      <screen x="1920" y="-219" width="1920" height="1040" />
+    </state>
+    <state x="2418" y="-54" key="SettingsEditor/0.0.1536.824/1920.-219.1920.1040@1920.-219.1920.1040" timestamp="1606156171150" />
+    <state x="2543" y="6" width="672" height="678" key="search.everywhere.popup" timestamp="1606155326020">
+      <screen x="1920" y="-219" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="6" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.-219.1920.1040@1920.-219.1920.1040" timestamp="1606155326020" />
+  </component>
+</project>
