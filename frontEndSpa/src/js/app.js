@@ -25,70 +25,89 @@ const pairing5 = document.getElementById("pairing-5");
 const flavorAffinities = document.querySelector(".flavor-affinities");
 const flavorAffinitiesUl = document.getElementById("flavor-affinities");
 
-const flavorAffinitiesLi = document.getElementById("flavor-affinities-li");
-const flavor1 = document.getElementById("flavor-1");
-const flavor2 = document.getElementById("flavor-2");
-const flavor3 = document.getElementById("flavor-3");
-const flavor4 = document.getElementById("flavor-4");
 
-const displayPairings = function (ingredients) {
 
-    ingredients.forEach((ingredient) => {
-      
-      ingredient.pairings.forEach((pairings) => {
-        
-        ingredient = foodSearch.value;
-        console.log(ingredient)
-        const pairingList = document.createElement("li");
-        pairingList.id = `pairing-${pairings.id}`;
-        pairingList.innerText = pairings.name;
-      })
-    });
-  };
+const displayPairings = function (ingredient) {
+  let timerValue = 200
+
+  ingredient.pairings.forEach((pairings) => {
+    const pairingList = document.createElement("li");
+    pairingList.innerText = pairings.name;
+    setTimeout(() => {
+      foodPairingsUl.append(pairingList)
+      pairingList.style.display = "inherit";
+    }, timerValue)
+    timerValue += 200
+  })
+};
+
+const displayAffinities = function (ingredient) {
+  let timerValue = 800
+  const flavor1 = document.createElement("li");
+  const flavor2 = document.createElement("li");
+  const flavor3 = document.createElement("li");
+  flavor1.innerText = ingredient.affinity1;
+  flavor2.innerText = ingredient.affinity2;
+  flavor3.innerText = ingredient.affinity3;
+  setTimeout(() => {
+    flavorAffinitiesUl.append(flavor1)
+    flavor1.style.display = "inherit";
+  }, 1000);
+  setTimeout(() => {
+    flavorAffinitiesUl.append(flavor2)
+    flavor2.style.display = "inherit";
+  }, 1200);
+  setTimeout(() => {
+    flavorAffinitiesUl.append(flavor3)
+    flavor3.style.display = "inherit";
+  }, 1400);
+}
+
+
 
 foodSearch.addEventListener("keydown", function (event) {
   if (event.code === "Enter") {
     searchTerm.innerText = foodSearch.value;
     searchTerm.style.display = "inherit";
-
+    clearChildren(foodPairingsUl)
+    clearChildren(flavorAffinitiesUl)
     filterButtonOne.style.display = "initial";
     filterButtonTwo.style.display = "initial";
     filterButtonThree.style.display = "initial";
     suggestedPairings.style.display = "inherit";
-    foodPairingsUl.append(displayPairings(allIngredients));
-    // setTimeout(() => {
-    //   foodPairingsLi.style.display = "inherit";
-    // }, 200);
-    // setTimeout(() => {
-    //   pairing1.style.display = "inherit";
-    // }, 400);
-    // setTimeout(() => {
-    //   pairing2.style.display = "inherit";
-    // }, 600);
-    // setTimeout(() => {
-    //   pairing3.style.display = "inherit";
-    // }, 800);
-    // setTimeout(() => {
-    //   pairing4.style.display = "inherit";
-    // }, 1000);
-    // setTimeout(() => {
-    //   pairing5.style.display = "inherit";
-    // }, 1200);
-    // flavorAffinities.style.display = "inherit";
-    // setTimeout(() => {
-    //   flavorAffinitiesLi.style.display = "inherit";
-    // }, 2000);
-    // setTimeout(() => {
-    //   flavor1.style.display = "inherit";
-    // }, 2200);
-    // setTimeout(() => {
-    //   flavor2.style.display = "inherit";
-    // }, 2400);
-    // setTimeout(() => {
-    //   flavor3.style.display = "inherit";
-    // }, 2600);
-    // setTimeout(() => {
-    //   flavor4.style.display = "inherit";
-    // }, 2800);
+    fetch(`http://localhost:8080/api/ingredient-name/${foodSearch.value}`, {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((ingredient) => displayPairings(ingredient))
+      .catch((error) => console.log(error));
+
+    fetch(`http://localhost:8080/api/ingredient-name/${foodSearch.value}`, {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((ingredient) => displayAffinities(ingredient))
+      .catch((error) => console.log(error));
+
+
+
+
+    flavorAffinities.style.display = "inherit";
+
   }
 });
+
+const clearChildren = function (element) {
+  while (element.firstChild) {
+      element.removeChild(element.lastChild);
+  }
+}
+
