@@ -92,7 +92,7 @@ public class Populator implements CommandLineRunner {
         pairingStorage.savePairing(capsTomatoes);
         Pairing normalTomatoes = new Pairing("tomatoes", 1, eggs);
         pairingStorage.savePairing(normalTomatoes);
-        Pairing boldTomatoes = new Pairing("toamtoes", 1, pork, lamb);
+        Pairing boldTomatoes = new Pairing("tomatoes", 1, pork, lamb);
         pairingStorage.savePairing(boldTomatoes);
 
         Pairing capsBasil = new Pairing("BASIL", 1, chicken, pasta, tofu);
