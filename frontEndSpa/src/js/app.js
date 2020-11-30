@@ -25,11 +25,7 @@ const pairing5 = document.getElementById("pairing-5");
 const flavorAffinities = document.querySelector(".flavor-affinities");
 const flavorAffinitiesUl = document.getElementById("flavor-affinities");
 
-const flavorAffinitiesLi = document.getElementById("flavor-affinities-li");
-const flavor1 = document.getElementById("flavor-1");
-const flavor2 = document.getElementById("flavor-2");
-const flavor3 = document.getElementById("flavor-3");
-const flavor4 = document.getElementById("flavor-4");
+
 
 const displayPairings = function (ingredient) {
   let timerValue = 200
@@ -46,14 +42,25 @@ const displayPairings = function (ingredient) {
 };
 
 const displayAffinities = function (ingredient) {
-
-  const affinity1 = document.createElement("li");
-  const affinity2 = document.createElement("li");
-  const affinity3 = document.createElement("li");
+  let timerValue = 800
+  const flavor1 = document.createElement("li");
+  const flavor2 = document.createElement("li");
+  const flavor3 = document.createElement("li");
   flavor1.innerText = ingredient.affinity1;
   flavor2.innerText = ingredient.affinity2;
   flavor3.innerText = ingredient.affinity3;
-
+  setTimeout(() => {
+    flavorAffinitiesUl.append(flavor1)
+    flavor1.style.display = "inherit";
+  }, 1000);
+  setTimeout(() => {
+    flavorAffinitiesUl.append(flavor2)
+    flavor2.style.display = "inherit";
+  }, 1200);
+  setTimeout(() => {
+    flavorAffinitiesUl.append(flavor3)
+    flavor3.style.display = "inherit";
+  }, 1400);
 }
 
 
@@ -62,7 +69,8 @@ foodSearch.addEventListener("keydown", function (event) {
   if (event.code === "Enter") {
     searchTerm.innerText = foodSearch.value;
     searchTerm.style.display = "inherit";
-
+    clearChildren(foodPairingsUl)
+    clearChildren(flavorAffinitiesUl)
     filterButtonOne.style.display = "initial";
     filterButtonTwo.style.display = "initial";
     filterButtonThree.style.display = "initial";
@@ -93,15 +101,13 @@ foodSearch.addEventListener("keydown", function (event) {
 
 
     flavorAffinities.style.display = "inherit";
-    setTimeout(() => {
-      flavor1.style.display = "inherit";
-    }, 2200);
-    setTimeout(() => {
-      flavor2.style.display = "inherit";
-    }, 2400);
-    setTimeout(() => {
-      flavor3.style.display = "inherit";
-    }, 2600);
+
   }
 });
+
+const clearChildren = function (element) {
+  while (element.firstChild) {
+      element.removeChild(element.lastChild);
+  }
+}
 
