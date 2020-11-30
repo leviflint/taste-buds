@@ -33,11 +33,10 @@ const flavor4 = document.getElementById("flavor-4");
 
 const displayPairings = function (ingredient) {
   let timerValue = 200
+
   ingredient.pairings.forEach((pairings) => {
     const pairingList = document.createElement("li");
-    pairingList.id = `pairing-${pairings.id}`;
     pairingList.innerText = pairings.name;
-    console.log(pairingList)
     setTimeout(() => {
       foodPairingsUl.append(pairingList)
       pairingList.style.display = "inherit";
@@ -47,12 +46,13 @@ const displayPairings = function (ingredient) {
 };
 
 const displayAffinities = function (ingredient) {
-  let timerValue = 200
-  ingredient.affinities.forEach((affinities) => {
-    flavor1.innerText = affinities.affinity1;
-    flavor2.innerText = affinities.affinity2;
-    flavor3.innerText = affinities.affinity3;
-  })
+
+  const affinity1 = document.createElement("li");
+  const affinity2 = document.createElement("li");
+  const affinity3 = document.createElement("li");
+  flavor1.innerText = ingredient.affinity1;
+  flavor2.innerText = ingredient.affinity2;
+  flavor3.innerText = ingredient.affinity3;
 
 }
 
@@ -76,31 +76,23 @@ foodSearch.addEventListener("keydown", function (event) {
     })
       .then((response) => response.json())
       .then((ingredient) => displayPairings(ingredient))
+      .catch((error) => console.log(error));
+
+    fetch(`http://localhost:8080/api/ingredient-name/${foodSearch.value}`, {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
       .then((ingredient) => displayAffinities(ingredient))
       .catch((error) => console.log(error));
-    // foodPairingsUl.append(displayPairings(allIngredients));
-    // setTimeout(() => {
-    //   foodPairingsLi.style.display = "inherit";
-    // }, 200);
-    // setTimeout(() => {
-    //   pairing1.style.display = "inherit";
-    // }, 400);
-    // setTimeout(() => {
-    //   pairing2.style.display = "inherit";
-    // }, 600);
-    // setTimeout(() => {
-    //   pairing3.style.display = "inherit";
-    // }, 800);
-    // setTimeout(() => {
-    //   pairing4.style.display = "inherit";
-    // }, 1000);
-    // setTimeout(() => {
-    //   pairing5.style.display = "inherit";
-    // }, 1200);
-    // flavorAffinities.style.display = "inherit";
-    // setTimeout(() => {
-    //   flavorAffinitiesLi.style.display = "inherit";
-    // }, 2000);
+
+
+
+
+    flavorAffinities.style.display = "inherit";
     setTimeout(() => {
       flavor1.style.display = "inherit";
     }, 2200);
@@ -110,9 +102,6 @@ foodSearch.addEventListener("keydown", function (event) {
     setTimeout(() => {
       flavor3.style.display = "inherit";
     }, 2600);
-    // setTimeout(() => {
-    //   flavor4.style.display = "inherit";
-    // }, 2800);
   }
 });
 
