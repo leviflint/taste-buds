@@ -35,7 +35,7 @@ public class Populator implements CommandLineRunner {
 
         Pairing boldLemon = new Pairing("lemon", 1,  chicken, salmon);
         pairingStorage.savePairing(boldLemon);
-        Pairing normalLemon = new Pairing( "lemon",3,  salmon, steak);
+        Pairing normalLemon = new Pairing( "lemon",2,  salmon, steak);
         pairingStorage.savePairing(normalLemon);
 
 
@@ -43,7 +43,15 @@ public class Populator implements CommandLineRunner {
         pairingStorage.savePairing(boldTeriyakiSauce);
 
 
-        Pairing italicGarlic = new Pairing( "garlic", 4,chicken);
+        Pairing italicGarlic = new Pairing( "garlic", 3,chicken);
         pairingStorage.savePairing(italicGarlic);
+
+        Pairing capsOnions = new Pairing("ONIONS", 1, chicken, steak);
+        pairingStorage.savePairing(capsOnions);
+
+        Pairing normalCumin = new Pairing("cumin", 2,chicken, steak);
+        pairingStorage.savePairing(normalCumin);
+
+
     }
 }
