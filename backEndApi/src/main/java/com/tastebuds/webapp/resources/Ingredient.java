@@ -14,6 +14,7 @@ public class Ingredient {
     @Id
     private Long id;
     @ManyToMany(mappedBy = "ingredients")
+    @OrderBy("textStyle ASC, name ASC")
     private Set<Pairing> pairings;
     private String affinity1;
     private String affinity2;
