@@ -32,6 +32,12 @@ const displayPairings = function (ingredient) {
 
   ingredient.pairings.forEach((pairings) => {
     const pairingList = document.createElement("li");
+    if (pairings.textStyle == 1) {
+      pairingList.style.fontWeight = "900"
+    } 
+    if (pairings.textStyle == 3) {
+      pairingList.style.fontStyle = "italic"
+    } 
     pairingList.innerText = pairings.name;
     setTimeout(() => {
       foodPairingsUl.append(pairingList)
@@ -107,7 +113,7 @@ foodSearch.addEventListener("keydown", function (event) {
 
 const clearChildren = function (element) {
   while (element.firstChild) {
-      element.removeChild(element.lastChild);
+    element.removeChild(element.lastChild);
   }
 }
 
