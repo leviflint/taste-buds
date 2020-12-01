@@ -76,7 +76,7 @@ foodSearch.addEventListener("keydown", function (event) {
     searchTerm.innerText = foodSearch.value;
     searchTerm.style.display = "inherit";
     clearChildren(foodPairingsUl)
-    clearChildren(flavorAffinitiesUl)
+    // clearChildren(flavorAffinitiesUl)
     filterButtonOne.style.display = "initial";
     filterButtonTwo.style.display = "initial";
     filterButtonThree.style.display = "initial";
