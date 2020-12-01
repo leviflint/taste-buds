@@ -1,3 +1,6 @@
-###
+### Get all posts
 GET localhost:8080/api/post
 Accept: application/json
+
+### Get post by id
+GET localhost:8080/api/post/42

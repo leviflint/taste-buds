@@ -22,4 +22,8 @@ public class PostStorage {
     public void save(Post post) {
         postRepo.save(post);
     }
+
+    public Post retrieveById(Long id) {
+        return postRepo.findById(id).get();
+    }
 }
