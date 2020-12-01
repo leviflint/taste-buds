@@ -49,6 +49,7 @@ const displayPairings = function (ingredient) {
 
 const displayAffinities = function (ingredient) {
   let timerValue = 800
+  const flipcard = document.getElementById("flipCard")
   const affinity1 = document.getElementById("affinity-1")
   const affinity1Url = document.getElementById("affinity-1-url")
   const affinity1Img = document.getElementById("affinity-1-img")
@@ -67,18 +68,9 @@ const displayAffinities = function (ingredient) {
   affinity3.innerText = ingredient.affinity3;
   affinity3Url.href = ingredient.affinity3Url;
   affinity3Img.src = ingredient.affinity3Photo;
-  // setTimeout(() => {
-  //   flavorAffinitiesUl.append(flavor1)
-  //   flavor1.style.display = "inherit";
-  // }, 1000);
-  // setTimeout(() => {
-  //   flavorAffinitiesUl.append(flavor2)
-  //   flavor2.style.display = "inherit";
-  // }, 1200);
-  // setTimeout(() => {
-  //   flavorAffinitiesUl.append(flavor3)
-  //   flavor3.style.display = "inherit";
-  // }, 1400);
+  setTimeout(() => {
+    flavorAffinities.style.visibility = "visible";
+  }, 1400);
 }
 
 
@@ -88,7 +80,6 @@ foodSearch.addEventListener("keydown", function (event) {
     searchTerm.innerText = foodSearch.value;
     searchTerm.style.display = "inherit";
     clearChildren(foodPairingsUl)
-    // clearChildren(flavorAffinitiesUl)
     filterButtonOne.style.display = "initial";
     filterButtonTwo.style.display = "initial";
     filterButtonThree.style.display = "initial";
@@ -119,7 +110,7 @@ foodSearch.addEventListener("keydown", function (event) {
 
 
     flavorAffinities.style.display = "inherit";
-
+    foodSearch.value = "";
   }
 });
 
