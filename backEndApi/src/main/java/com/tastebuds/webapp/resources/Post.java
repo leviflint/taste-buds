@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Blog {
+public class Post {
     @Id
     @GeneratedValue
     private Long id;
@@ -16,14 +16,14 @@ public class Blog {
     private String recipeLink;
     private String photo;
 
-    public Blog( String ingredient, String recipeName, String recipeLink, String hashtag, String photo) {
+    public Post(String ingredient, String recipeName, String recipeLink, String hashtag, String photo) {
         this.hashtag = hashtag;
         this.recipeName = recipeName;
         this.recipeLink = recipeLink;
         this.photo = photo;
         this.ingredient = ingredient;
     }
-    protected Blog(){
+    protected Post(){
 
     }
 

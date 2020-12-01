@@ -1,16 +1,15 @@
 package com.tastebuds.webapp;
 
+import com.tastebuds.webapp.Storage.PostRepository;
 import com.tastebuds.webapp.Storage.IngredientRepository;
 import com.tastebuds.webapp.Storage.PairingsRepository;
-import com.tastebuds.webapp.resources.Blog;
+import com.tastebuds.webapp.resources.Post;
 import com.tastebuds.webapp.resources.Ingredient;
 import com.tastebuds.webapp.resources.Pairing;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-
-import java.util.Properties;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -24,7 +23,7 @@ public class JPAWiringTest {
     @Autowired
     private PairingsRepository pairingRepo;
     @Autowired
-    private BlogRepository blogRepo;
+    private PostRepository blogRepo;
 
 
     private void flushClear() {
@@ -65,9 +64,9 @@ public class JPAWiringTest {
     }
     @Test
     public void saveBlogPost() {
-        Blog testBlog = new Blog ("shrimp","Cajun Shrimp", "google.com", "#Creamy","img/Cajun Pasta.jpg");
+        Post testBlog = new Post("shrimp","Cajun Shrimp", "google.com", "#Creamy","img/Cajun Pasta.jpg");
         blogRepo.save(testBlog);
-        Blog retrieveBlog = blogRepo.findById(testBlog.getId()).get();
+        Post retrieveBlog = blogRepo.findById(testBlog.getId()).get();
         assertThat(retrieveBlog).isEqualTo(testBlog);
     }
 
