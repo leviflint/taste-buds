@@ -15,3 +15,4 @@ const allPosts = [{
         "photo": "img/chili.jpg"
     }
 ]
+export {allPosts}

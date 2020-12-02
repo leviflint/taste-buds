@@ -1,9 +1,10 @@
-import { allPosts } from "./samplePostJSON"
+import { allPosts } from "./samplePostJSON.js"
 
-const displayPosts = function (posts) {
-    const mainElemenet = document.getElementById("posts");
+const displayPosts = function (allPosts) {
+    const mainElemenet = document.createElement("div");
+    mainElemenet.classList.add("posts");
 
-    posts.forEach((post) => {
+    allPosts.forEach((post) => {
         let outerDiv = document.createElement("div");
         outerDiv.classList.add("post");
         mainElemenet.appendChild(outerDiv);
@@ -45,4 +46,6 @@ const displayPosts = function (posts) {
 
 
     })
+    return mainElemenet;
 }
+export {displayPosts}
