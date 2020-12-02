@@ -6,6 +6,9 @@ import com.tastebuds.webapp.resources.Ingredient;
 import com.tastebuds.webapp.resources.Pairing;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @RestController
 public class IngredientController {
     private IngredientStorage ingredientStorage;
@@ -36,4 +39,14 @@ public class IngredientController {
     public Ingredient retrieveIngredientByName(@PathVariable String name) {
         return ingredientStorage.findIngredientByName(name);
     }
+    @GetMapping("/api/ingredient/{id}/pairing/dietaryFilter")
+    public List<Pairing> retrievePairingWithDietaryFilter(@RequestParam Pairing.DietaryFilter filter, @PathVariable Long id){
+        Ingredient ingredient = ingredientStorage.retrieveIngredientById(id);
+
+        return ingredient.getPairings()
+                .stream()
+                .filter(pairing -> pairing.getDietaryFilter().equals(filter))
+                .collect(Collectors.toList());
+    }
+
 }

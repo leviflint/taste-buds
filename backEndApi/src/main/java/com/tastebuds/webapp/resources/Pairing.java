@@ -10,9 +10,12 @@ import java.util.Set;
 public class Pairing {
 
 
-
+    private DietaryFilter dietaryFilter;
     private String name;
     private int textStyle;
+    public enum DietaryFilter {
+        SWEET, SOUR , SALTY, BLAND, UMAMI, SMOKY
+    }
     @GeneratedValue
     @Id
     private Long id;
@@ -20,16 +23,20 @@ public class Pairing {
     @JsonIgnore
     private Set<Ingredient> ingredients;
 
-    public Pairing(String name, int textStyle, Ingredient... ingredients) {
+    public Pairing(String name, DietaryFilter dietaryFilter, int textStyle, Ingredient... ingredients) {
         this.name = name;
         this.textStyle = textStyle;
         this.ingredients = Set.of(ingredients);
+        this.dietaryFilter = dietaryFilter;
+
     }
 
     protected Pairing(){
     }
 
-
+    public DietaryFilter getDietaryFilter() {
+        return dietaryFilter;
+    }
 
     public String getName() {
         return name;

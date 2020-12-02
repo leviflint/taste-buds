@@ -49,79 +49,81 @@ public class Populator implements CommandLineRunner {
 
 
 
-        Pairing boldLemon = new Pairing("lemon", 1,  chicken, salmon, shrimp);
+        Pairing boldLemon = new Pairing("lemon", Pairing.DietaryFilter.SOUR ,1,  chicken, salmon, shrimp);
         pairingStorage.savePairing(boldLemon);
-        Pairing normalLemon = new Pairing( "lemon",2, steak, pasta);
+        Pairing normalLemon = new Pairing( "lemon" , Pairing.DietaryFilter.SOUR ,2, steak, pasta);
         pairingStorage.savePairing(normalLemon);
-        Pairing italicLemon = new Pairing("lemon", 1, pork, lamb, seitan, tofu);
+        Pairing italicLemon = new Pairing("lemon",Pairing.DietaryFilter.SOUR ,1, pork, lamb, seitan, tofu);
         pairingStorage.savePairing(italicLemon);
 
 
-        Pairing boldTeriyakiSauce = new Pairing( "teriyaki sauce", 1, salmon, steak, chicken, seitan,tofu, pork);
+        Pairing boldTeriyakiSauce = new Pairing( "teriyaki sauce", Pairing.DietaryFilter.SALTY ,1, salmon, steak, chicken, seitan,tofu, pork);
         pairingStorage.savePairing(boldTeriyakiSauce);
-        Pairing italicTeriyakiSauce = new Pairing("teriyaki sauce",3, eggs, lamb);
+        Pairing italicTeriyakiSauce = new Pairing("teriyaki sauce", Pairing.DietaryFilter.SALTY,3, eggs, lamb);
         pairingStorage.savePairing(italicTeriyakiSauce);
 
-        Pairing capsGarlic = new Pairing("GARLIC", 1, chicken, steak, shrimp, pasta, lamb, tofu);
+        Pairing capsGarlic = new Pairing("GARLIC", Pairing.DietaryFilter.SWEET,1, chicken, steak, shrimp, pasta, lamb, tofu);
         pairingStorage.savePairing(capsGarlic);
-        Pairing italicGarlic = new Pairing( "garlic", 3, pork, seitan);
+        Pairing italicGarlic = new Pairing( "garlic", Pairing.DietaryFilter.SWEET,3, pork, seitan);
         pairingStorage.savePairing(italicGarlic);
 
-        Pairing capsOnions = new Pairing("ONIONS", 1, chicken, steak, shrimp, pasta, eggs, lamb, seitan, pork, tofu);
+        Pairing capsOnions = new Pairing("ONIONS", Pairing.DietaryFilter.SWEET,1, chicken, steak, shrimp, pasta, eggs, lamb, seitan, pork, tofu);
         pairingStorage.savePairing(capsOnions);
 
-        Pairing normalCumin = new Pairing("cumin", 2,chicken, steak, pork, lamb, tofu, seitan);
+        Pairing normalCumin = new Pairing("cumin", Pairing.DietaryFilter.SMOKY,2,chicken, steak, pork, lamb, tofu, seitan);
         pairingStorage.savePairing(normalCumin);
 
-        Pairing boldPotatoes = new Pairing("potatoes", 1, chicken, steak, pork, lamb);
+        Pairing boldPotatoes = new Pairing("potatoes", Pairing.DietaryFilter.SWEET ,1, chicken, steak, pork, lamb);
         pairingStorage.savePairing(boldPotatoes);
-        Pairing capsPotatoes = new Pairing("POTATOES", 1, eggs);
+        Pairing capsPotatoes = new Pairing("POTATOES", Pairing.DietaryFilter.SWEET,1, eggs);
         pairingStorage.savePairing(capsPotatoes);
 
-        Pairing capsRosemary = new Pairing("ROSEMARY", 1, chicken, steak, pork, lamb );
+        Pairing capsRosemary = new Pairing("ROSEMARY", Pairing.DietaryFilter.SWEET,1, chicken, steak, pork, lamb );
         pairingStorage.savePairing(capsRosemary);
-        Pairing normalRosemary = new Pairing("rosemary", 1, pasta, tofu);
+        Pairing normalRosemary = new Pairing("rosemary", Pairing.DietaryFilter.SWEET,1, pasta, tofu);
         pairingStorage.savePairing(normalRosemary);
 
-        Pairing capsButter = new Pairing("BUTTER", 1, salmon, chicken, steak, pork, lamb);
+        Pairing capsButter = new Pairing("BUTTER", Pairing.DietaryFilter.BLAND,1, salmon, chicken, steak, pork, lamb);
         pairingStorage.savePairing(capsButter);
-        Pairing boldButter = new Pairing("butter",1, shrimp, eggs, pasta);
+        Pairing boldButter = new Pairing("butter", Pairing.DietaryFilter.BLAND,1, shrimp, eggs, pasta);
         pairingStorage.savePairing(boldButter);
 
-        Pairing capsTomatoes = new Pairing("TOMATOES", 1, chicken, shrimp, pasta, seitan);
+        Pairing capsTomatoes = new Pairing("TOMATOES", Pairing.DietaryFilter.SWEET,1, chicken, shrimp, pasta, seitan);
         pairingStorage.savePairing(capsTomatoes);
-        Pairing normalTomatoes = new Pairing("tomatoes", 1, eggs);
+        Pairing normalTomatoes = new Pairing("tomatoes", Pairing.DietaryFilter.SWEET,1, eggs);
         pairingStorage.savePairing(normalTomatoes);
-        Pairing boldTomatoes = new Pairing("tomatoes", 1, pork, lamb);
+
+        Pairing boldTomatoes = new Pairing("tomatoes", Pairing.DietaryFilter.SWEET,1, pork, lamb);
+
         pairingStorage.savePairing(boldTomatoes);
 
-        Pairing capsBasil = new Pairing("BASIL", 1, chicken, pasta, tofu);
+        Pairing capsBasil = new Pairing("BASIL", Pairing.DietaryFilter.SWEET,1, chicken, pasta, tofu);
         pairingStorage.savePairing(capsBasil);
-        Pairing italicsBasil = new Pairing("basil", 1, eggs, seitan, lamb);
+        Pairing italicsBasil = new Pairing("basil", Pairing.DietaryFilter.SWEET,1, eggs, seitan, lamb);
         pairingStorage.savePairing(italicsBasil);
 
-        Pairing capsGinger = new Pairing("GINGER",1, chicken, salmon, pork );
+        Pairing capsGinger = new Pairing("GINGER", Pairing.DietaryFilter.SOUR,1, chicken, salmon, pork );
         pairingStorage.savePairing(capsGinger);
-        Pairing boldGinger = new Pairing("ginger",1, lamb);
+        Pairing boldGinger = new Pairing("ginger", Pairing.DietaryFilter.SOUR,1, lamb);
         pairingStorage.savePairing(boldGinger);
-        Pairing normalGinger = new Pairing("ginger", 1, seitan);
+        Pairing normalGinger = new Pairing("ginger", Pairing.DietaryFilter.SOUR,1, seitan);
         pairingStorage.savePairing(normalGinger);
 
-        Pairing boldBacon = new Pairing("bacon",1, chicken, shrimp, eggs, pasta);
+        Pairing boldBacon = new Pairing("bacon", Pairing.DietaryFilter.SALTY,1, chicken, shrimp, eggs, pasta);
         pairingStorage.savePairing(boldBacon);
-        Pairing normalBacon = new Pairing("bacon", 1, lamb);
+        Pairing normalBacon = new Pairing("bacon", Pairing.DietaryFilter.SALTY,1, lamb);
         pairingStorage.savePairing(normalBacon);
 
-        Pairing capsMushroom = new Pairing("MUSHROOMS", 1, chicken, eggs, pasta, seitan, tofu);
+        Pairing capsMushroom = new Pairing("MUSHROOMS", Pairing.DietaryFilter.UMAMI,1, chicken, eggs, pasta, seitan, tofu);
         pairingStorage.savePairing(capsMushroom);
-        Pairing boldMushroom = new Pairing("mushrooms",1, steak, shrimp);
+        Pairing boldMushroom = new Pairing("mushrooms",Pairing.DietaryFilter.UMAMI,1, steak, shrimp);
         pairingStorage.savePairing(boldMushroom);
-        Pairing normalMushroom = new Pairing("mushroom", 1, lamb, pork);
+        Pairing normalMushroom = new Pairing("mushroom", Pairing.DietaryFilter.UMAMI,1, lamb, pork);
         pairingStorage.savePairing(normalMushroom);
 
-        Pairing normalRice = new Pairing("rice", 2, steak, shrimp, eggs, pork);
+        Pairing normalRice = new Pairing("rice", Pairing.DietaryFilter.BLAND,2, steak, shrimp, eggs, pork);
         pairingStorage.savePairing(normalRice);
-        Pairing boldRice = new Pairing("rice", 1, chicken, salmon, lamb, seitan, tofu);
+        Pairing boldRice = new Pairing("rice", Pairing.DietaryFilter.BLAND,1, chicken, salmon, lamb, seitan, tofu);
         pairingStorage.savePairing(boldRice);
 
 
