@@ -3,7 +3,6 @@ import { allIngredients } from "./sampleIngredientJSON.js";
 const mainView = document.querySelector(".container");
 
 const foodSearch = document.getElementById("food-search");
-const foodSearchValue = document.getElementById("food-search").value;
 
 const searchTerm = document.querySelector(".search-term");
 
@@ -13,19 +12,11 @@ const filterButtonThree = document.getElementById("filter-button-three");
 
 const suggestedPairings = document.querySelector(".suggested-pairings");
 
-const foodPairingsUl = document.getElementById("food-pairings");
-const foodPairingsLi = document.getElementById("food-pairings-li");
 
-const pairing1 = document.getElementById("pairing-1");
-const pairing2 = document.getElementById("pairing-2");
-const pairing3 = document.getElementById("pairing-3");
-const pairing4 = document.getElementById("pairing-4");
-const pairing5 = document.getElementById("pairing-5");
+const foodPairingsUl = document.getElementById("food-pairings");
 
 const flavorAffinities = document.querySelector(".flavor-affinities");
-const flipcardContainer = document.getElementById("flipcard-container")
-const flavorAffinitiesUl = document.getElementById("flavor-affinities");
-
+const flipcardContainer = document.getElementById("flipcard-container");
 
 
 const displayPairings = function (ingredient) {
@@ -33,18 +24,23 @@ const displayPairings = function (ingredient) {
 
   ingredient.pairings.forEach((pairings) => {
     const pairingList = document.createElement("li");
+    pairingList.classList.add("pairings-li")
     if (pairings.textStyle == 1) {
       pairingList.style.fontWeight = "900"
     } 
     if (pairings.textStyle == 3) {
       pairingList.style.fontStyle = "italic"
     } 
+    foodPairingsUl.append(pairingList)
     pairingList.innerText = pairings.name;
-    setTimeout(() => {
-      foodPairingsUl.append(pairingList)
-      pairingList.style.display = "inherit";
-    }, timerValue)
-    timerValue += 200
+    pairingList.style.display = "inherit";
+    suggestedPairings.classList.add("slidein")
+
+    // setTimeout(() => {
+    //   
+      
+    // }, timerValue)
+    // timerValue += 100
   })
 };
 
@@ -67,6 +63,7 @@ const displayAffinities = function (ingredient) {
   const cardFront1 = document.createElement("div");
   cardFront1.classList.add("side")
   cardFront1.classList.add("front")
+  cardFront1.classList.add("affinities-list")
   cardFront1.innerText = ingredient.affinity1;
   card1.appendChild(cardFront1)
 
@@ -184,9 +181,12 @@ const displayAffinities = function (ingredient) {
   overlayText3.innerText = "Click for Recipe"
   overlay3.appendChild(overlayText3)
 
-  setTimeout(() => {
-    flavorAffinities.style.visibility = "visible";
-  }, 1400);
+  flavorAffinities.style.visibility = "visible";
+  flavorAffinities.classList.add("slideup")
+
+  // setTimeout(() => {
+  //   
+  // }, 1400);
 }
 
 
@@ -195,12 +195,19 @@ foodSearch.addEventListener("keydown", function (event) {
   if (event.code === "Enter") {
     searchTerm.innerText = foodSearch.value;
     searchTerm.style.display = "inherit";
+    searchTerm.classList.add("fadein")
+    filterButtonOne.classList.add("fadein")
+    filterButtonTwo.classList.add("fadein")
+    filterButtonThree.classList.add("fadein")
     clearChildren(foodPairingsUl)
     clearChildren(flipcardContainer)
+    suggestedPairings.classList.remove("slidein")
+    flavorAffinities.classList.remove("slideup")
     filterButtonOne.style.display = "initial";
     filterButtonTwo.style.display = "initial";
     filterButtonThree.style.display = "initial";
     suggestedPairings.style.display = "inherit";
+
     fetch(`http://localhost:8080/api/ingredient-name/${foodSearch.value}`, {
       method: "GET",
       mode: "cors",
@@ -222,12 +229,14 @@ foodSearch.addEventListener("keydown", function (event) {
       .then((response) => response.json())
       .then((ingredient) => displayAffinities(ingredient))
       .catch((error) => console.log(error));
-
-
-
-
     
     foodSearch.value = "";
+    setTimeout(() => {
+      searchTerm.classList.remove("fadein")
+      filterButtonOne.classList.remove("fadein")
+      filterButtonTwo.classList.remove("fadein")
+      filterButtonThree.classList.remove("fadein")
+    }, 3000);
   }
 });
 

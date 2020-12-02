@@ -52,7 +52,7 @@ h3 {
 h4 {
     color: var(--orange);
     font-weight: 900;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .search {
@@ -73,8 +73,25 @@ h4 {
     font-size: 2em;
     text-align: center;
     outline: none;
-    width: 40%;
+    width: 50%;
     font-family: 'Darker Grotesque', sans-serif;
+}
+
+.legend {
+    font-size: 1.25em;
+    margin-bottom: 10px;
+    border-bottom: solid;
+    border-color: var(--teal);
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+.best {
+    font-weight: 900;
+}
+
+.better {
+    font-weight: 900;
 }
 
 .food-search-button {
@@ -118,8 +135,60 @@ h4 {
     width: 60%;
     justify-self: center;
     align-self: center;
+    place-items: center;
     font-weight: 700;
     display: none;
+}
+
+.slidein {
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+@keyframes slidein {
+    from {
+        margin-left:100%;
+      }
+      
+      to {
+        margin-left:0%;
+      }
+}
+
+.slideup {
+    animation-duration: 2s;
+    animation-name: slideup;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+@keyframes slideup {
+    from {
+        margin-top: 100%;
+    }
+
+    to {
+        margin-top: 0%;
+    }
+}
+
+.fadein {
+    animation-duration: 3s;
+    animation-name: fadein;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
 }
 
 .flavor-affinities {
