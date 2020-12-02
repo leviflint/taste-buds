@@ -130,6 +130,11 @@ h4 {
     color: rgb(122, 217, 230);
 }
 
+.filter-button-active {
+    background-color: var(--black);
+    color: rgb(122, 217, 230);
+}
+
 .suggested-pairings {
     border: solid;
     border-width: 15px;

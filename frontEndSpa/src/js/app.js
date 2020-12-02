@@ -35,7 +35,7 @@ const displayFilters = function(ingredient) {
         filterButton1.classList.add("filter-button")
         filterButton1.classList.add("fadein")
         filterButton1.style.display = "initial"
-
+        
         setTimeout(() => {
           searchTerm.classList.remove("fadein")
           filterButton1.classList.remove("fadein")
@@ -44,17 +44,18 @@ const displayFilters = function(ingredient) {
         buttons.appendChild(filterButton1);
 
         filterButton1.addEventListener('click', () => {
+            filterButton1.classList.add("filter-button-active");
             clearChildren(foodPairingsUl)
             fetch(`http://localhost:8080/api/ingredient/${ingredient.id}/pairing/dietaryFilter?filter=${filter}`)
                 .then((response) => response.json())
                 .then((pairings) => displayPairings(pairings))
+                
         })
     })
 }
 
 
 const displayPairings = function(pairings) {
-    let timerValue = 200
 
     pairings.forEach((pairings) => {
         const pairingList = document.createElement("li");
