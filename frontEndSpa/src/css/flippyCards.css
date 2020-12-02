@@ -26,10 +26,10 @@
 }
 
 .flipCard {
-    -webkit-perspective: 800;
+    /* -webkit-perspective: 800;
     -ms-perspective: 800;
     -moz-perspective: 800;
-    -o-perspective: 800;
+    -o-perspective: 800; */
      width: 300px;
      height: 350px;
      position: relative;
