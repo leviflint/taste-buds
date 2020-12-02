@@ -26,25 +26,25 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception{
-        Ingredient chicken = new Ingredient("chicken","garlic, pasta, pesto", "rice, beans, cheese","spinach, strawberry, poppy seed dressing");
+        Ingredient chicken = new Ingredient("chicken","garlic, pasta, pesto", "https://tinyurl.com/y2medmvg", "https://tinyurl.com/y58d5mgj", "rice, beans, cheese", "https://tinyurl.com/yxfov8cu", "https://tinyurl.com/y3lh3uyd", "spinach, strawberry, poppy seed dressing", "https://tinyurl.com/yywdbdg2", "https://tinyurl.com/yyu3a2rf");
         ingredientStorage.saveIngredient(chicken);
-        Ingredient salmon = new Ingredient("salmon", "nori, rice, soysauce", "asparagus, potatoes, butter", "lettuce, tomatoes, balsamic vinaigrette");
+        Ingredient salmon = new Ingredient("salmon", "nori, rice, soysauce", "https://tinyurl.com/y2wj32vv", "https://tinyurl.com/y4rzgk5u", "asparagus, potatoes, butter", "https://tinyurl.com/y4qacr9x", "https://tinyurl.com/y6ft6bps", "lettuce, tomatoes, balsamic vinaigrette", "https://tinyurl.com/y594v45u", "https://tinyurl.com/yyvdl8we");
         ingredientStorage.saveIngredient(salmon);
-        Ingredient steak = new Ingredient("steak", "ketchup, cheese whiz, cheetos", "baked potatoes, broccoli, mushrooms", "shrimp, linguine, olive oil");
+        Ingredient steak = new Ingredient("steak", "butter, garlic, thyme", "https://tinyurl.com/y68sskcz", "https://tinyurl.com/yx9kftwf",  "baked potatoes, broccoli, mushrooms", "https://tinyurl.com/y4yeorzx", "https://tinyurl.com/y3x8hgyb", "shrimp, linguine, olive oil", "https://tinyurl.com/y3od6xll", "https://tinyurl.com/yygnmyfa");
         ingredientStorage.saveIngredient(steak);
-        Ingredient shrimp = new Ingredient("shrimp", "cajun seasoning, heavy cream, penne", "chiles, lime juice, brown sugar", "horseradish, ketchup, lemon");
+        Ingredient shrimp = new Ingredient("shrimp", "cajun seasoning, heavy cream, penne", "https://tinyurl.com/y5ujrtoz", "https://tinyurl.com/y3szxb9j", "chiles, lime juice, brown sugar", "https://tinyurl.com/y29nwouw", "https://tinyurl.com/yxvsj2sc", "horseradish, ketchup, lemon", "https://tinyurl.com/y5oy7874", "https://tinyurl.com/y3btumwp");
         ingredientStorage.saveIngredient(shrimp);
-        Ingredient pasta = new Ingredient("pasta", "tomatoes, basil, garlic", "Gruyere, parmesan, cheddar","ricotta, tomatoes, cream cheese");
+        Ingredient pasta = new Ingredient("pasta", "tomatoes, basil, garlic", "https://tinyurl.com/y33gxksz", "https://tinyurl.com/yykpznzf", "Gruyere, parmesan, cheddar", "https://tinyurl.com/y667noz4", "https://tinyurl.com/y5vnycks", "ricotta, tomatoes, cream cheese", "https://tinyurl.com/y2tvvyce", "https://tinyurl.com/y5nt9v6h");
         ingredientStorage.saveIngredient(pasta);
-        Ingredient eggs = new Ingredient("eggs", "cheese, bacon, onions","cream, vanilla, sugar","soy sauce, mirin, dashi");
+        Ingredient eggs = new Ingredient("eggs", "cheese, bacon, onions", "https://tinyurl.com/y365z36f", "https://tinyurl.com/yyxa57r6", "cream, vanilla, sugar", "https://tinyurl.com/y35xwxqm", "https://tinyurl.com/y43nvqgh", "soy sauce, mirin, dashi", "https://tinyurl.com/y46wk83f", "https://tinyurl.com/y483a4k7");
         ingredientStorage.saveIngredient(eggs);
-        Ingredient pork = new Ingredient("pork", "tortilla, cilantro, pineapple", "dough, red sauce, cheese", "fennel, garlic, black pepper");
+        Ingredient pork = new Ingredient("pork", "tortilla, cilantro, pineapple", "https://tinyurl.com/y2kse3lx", "https://tinyurl.com/yxbfao4o", "dough, red sauce, cheese", "https://tinyurl.com/y5jfhhmp", "https://tinyurl.com/y3murmfy", "fennel, garlic, black pepper", "https://tinyurl.com/y2f2xcfa", "https://tinyurl.com/yyu74nj4");
         ingredientStorage.saveIngredient(pork);
-        Ingredient lamb = new Ingredient("lamb", "lettuce, pita, tomatoes", "parsley, mint, rice", "tomato, potato, carrot");
+        Ingredient lamb = new Ingredient("lamb", "lettuce, pita, tomatoes", "https://tinyurl.com/y6nc95p8", "https://tinyurl.com/y6pcjhoh", "parsley, mint, rice", "https://tinyurl.com/yyczmjzu", "https://tinyurl.com/y4rxaw87", "tomato, potato, carrot", "https://tinyurl.com/y4mzx5dq", "https://tinyurl.com/y2ck77au");
         ingredientStorage.saveIngredient(lamb);
-        Ingredient seitan = new Ingredient("seitan", "rice, peppers, sessame oil", "mashed potatoes, gravy, mac n cheese", "flour tortilla, lettuce, black beans");
+        Ingredient seitan = new Ingredient("seitan", "rice, peppers, sessame oil", "https://tinyurl.com/y5fsnno2", "https://tinyurl.com/yyjc56lo", "mashed potatoes, gravy, mac n cheese", "https://tinyurl.com/y52kyh92", "https://tinyurl.com/yyemexne", "flour tortilla, lettuce, black beans", "https://tinyurl.com/y522kvds", "https://tinyurl.com/y2xfxklu");
         ingredientStorage.saveIngredient(seitan);
-        Ingredient tofu = new Ingredient("tofu", "general tso's, rice, broccoli", "carrot, zucchini, olive oil", "green onion, barbeque sauce, hash browns");
+        Ingredient tofu = new Ingredient("tofu", "general tso's, rice, broccoli", "https://tinyurl.com/ydhqxj44", "https://tinyurl.com/y5udk5mp", "carrot, zucchini, olive oil", "https://tinyurl.com/y3oxhont", "https://tinyurl.com/yxlh7rd3", "green onion, barbeque sauce, hash browns", "https://tinyurl.com/yyzdz2nd", "https://tinyurl.com/yyzaxc69");
         ingredientStorage.saveIngredient(tofu);
 
 
@@ -92,7 +92,9 @@ public class Populator implements CommandLineRunner {
         pairingStorage.savePairing(capsTomatoes);
         Pairing normalTomatoes = new Pairing("tomatoes", Pairing.DietaryFilter.SWEET,1, eggs);
         pairingStorage.savePairing(normalTomatoes);
+
         Pairing boldTomatoes = new Pairing("tomatoes", Pairing.DietaryFilter.SWEET,1, pork, lamb);
+
         pairingStorage.savePairing(boldTomatoes);
 
         Pairing capsBasil = new Pairing("BASIL", Pairing.DietaryFilter.SWEET,1, chicken, pasta, tofu);

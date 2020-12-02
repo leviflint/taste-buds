@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&family=Pacifico&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: rgb(38, 38, 38);
+    --orange: rgb(255, 127, 17);
+    --red: rgb(255, 27, 28);
+    --beige: rgb(226, 232, 206);
+    --teal: rgb(59, 210, 230);
+    --laurel: rgb(197, 218, 188);
+    --white: rgb(255, 255, 255);
+    --acid: rgb(189, 191, 9);
+    --purple: rgb(209, 56, 191);
+}
+
+.flipcard-container {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flipCard {
+    -webkit-perspective: 800;
+    -ms-perspective: 800;
+    -moz-perspective: 800;
+    -o-perspective: 800;
+     width: 300px;
+     height: 350px;
+     position: relative;
+     margin: 20px;
+     place-self: center;
+  }
+
+  .flipCard .card.flipped {
+    transform:rotatey(-180deg);
+    -ms-transform:rotatey(-180deg);
+    -moz-transform:rotatey(-180deg);
+    -webkit-transform:rotatey(-180deg);
+    -o-transform:rotatey(-180deg);
+  }
+  .flipCard .card {
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+    -moz-transform-style: preserve-3d;
+    -moz-transition: 0.5s;
+    -ms-transform-style: preserve-3d;
+    -ms-transition: 0.5s;
+    -o-transform-style: preserve-3d;
+    -o-transition: 0.5s;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+  }
+  .flipCard .card .side {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 2;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    overflow: auto;
+  }
+  .flipCard .card .back {
+    background: white;
+    color: black;
+    transform:rotatey(-180deg);
+    -ms-transform:rotatey(-180deg);
+    -moz-transform:rotatey(-180deg);
+    -webkit-transform:rotatey(-180deg);
+    -o-transform:rotatey(-180deg);
+  }
+  
+  .flipCard .card .front {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 120px;
+    background-color: var(--teal);
+    border: 3px solid white;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  
+  }
+  .flipCard .card .back {
+    background-color: var(--white);
+    border: 3px solid white;
+    text-align: center;
+    color: var(--black);
+    font-size: 2em;
+    overflow: hidden;
+  }
+
+  #affinity-1-img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+  }
+
+  #affinity-2-img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+  }
+
+  #affinity-3-img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+  }
+
+/* Hover effects for back of cards */
+
+  .side .back {
+    position: relative;
+    width: 50%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--teal);
+  }
+  
+  .back:hover .overlay {
+    opacity: .9;
+  }
+  
+  .text {
+    color: var(--black);
+    font-family: 'Pacifico', cursive;
+    font-size: 1em;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }

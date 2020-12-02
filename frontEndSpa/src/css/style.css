@@ -128,11 +128,11 @@ h4 {
     border-radius: 20px;
     border-color: var(--acid);
     background-color: var(--white);
-    width: 60%;
+    width: 95%;
     justify-self: center;
     align-self: center;
     font-weight: 600;
-    display: none;
+    visibility: hidden;
 }
 
 li {
