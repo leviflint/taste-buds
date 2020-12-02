@@ -245,4 +245,3 @@ const clearChildren = function (element) {
     element.removeChild(element.lastChild);
   }
 }
-
