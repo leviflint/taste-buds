@@ -6,7 +6,8 @@ Accept: application/json
 GET localhost:8080/api/ingredient/1
 
 ### Get Ingredient ny name (also shows pairings)
-GET localhost:8080/api/ingredient-name/salmon
+GET localhost:8080/api/ingredient-name/chicken
+
 
 ### Post new ingredient
 POST http://localhost:8080/api/ingredient

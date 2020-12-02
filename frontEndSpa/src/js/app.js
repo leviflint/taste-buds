@@ -37,8 +37,9 @@ const displayFilters = function(ingredient) {
         filterButton1.style.display = "initial"
         
         setTimeout(() => {
-          searchTerm.classList.remove("fadein")
-          filterButton1.classList.remove("fadein")
+            searchTerm.classList.remove("fadein")
+            filterButton1.classList.remove("fadein")
+            filterReset.classList.remove("fadein")
         }, 3000);
 
         buttons.appendChild(filterButton1);
@@ -51,6 +52,28 @@ const displayFilters = function(ingredient) {
                 .then((pairings) => displayPairings(pairings))
                 
         })
+    })
+
+    const filterReset = document.createElement("button");
+    filterReset.innerText = "Clear Filters"
+    filterReset.classList.add("filter-button")
+    filterReset.classList.add("fadein")
+    filterReset.style.display = "initial"
+    buttons.appendChild(filterReset);
+    filterReset.addEventListener('click', () => {
+        clearChildren(foodPairingsUl)
+        suggestedPairings.style.display = "inherit"
+        fetch(`http://localhost:8080/api/ingredient-name/${ingredient.ingredient}`) //, {
+            // method: "GET",
+            // mode: "no-cors",
+            // headers: {
+            // "Content-Type": "application/json",
+            // },
+            // })
+            .then((response) => response.json())
+            .then((ingredient) => displayPairings(ingredient.pairings))
+            .catch((error) => console.log(error));
+
     })
 }
 
@@ -218,7 +241,7 @@ foodSearch.addEventListener("keydown", function(event) {
         searchTerm.innerText = foodSearch.value;
         searchTerm.style.display = "inherit";
         searchTerm.classList.add("fadein")
-        
+
         clearChildren(foodPairingsUl)
         clearChildren(flipcardContainer)
         clearChildren(buttons)
