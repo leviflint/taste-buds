@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <link rel="stylesheet" href="./css/style.css" class="stylesheet" />
     <link rel="stylesheet" href="./css/layout.css" class="stylesheet" />
     <link rel="stylesheet" href="./css/flippyCards.css" class="stylesheet" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taste Buds</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="container">
-      <header>Taste Buds</header>
-      <div class="search">
-        <input
-          type="text"
-          id="food-search"
-          class="food-search"
-          placeholder="Enter an ingredient"
-          autofocus
-        />
-        <h3 class="search-term">Search Term Displays Here</h3>
-        <button id="filter-button-one" class="filter-button">Filter</button>
-        <button id="filter-button-two" class="filter-button">Filter</button>
-        <button id="filter-button-three" class="filter-button">Filter</button>
-      </div>
-      <div class="suggested-pairings">
-        <h4 class="popular-pairings">Popular Pairings</h4>
-        <h2 class="legend"><span class="best">BEST - </span><span class="better">great - </span><span class="good">better - </span><span class="italics">good</span></h2>
-        <ul id="food-pairings" class="food-pairings"></ul>
-      </div>
-      <div class="flavor-affinities">
-        <h4 class="affinities-title">Flavor Affinities: Recipes & Ideas</h4>
-        <div class="flipcard-container" id="flipcard-container">
+        <header>Taste Buds</header>
+        <div class="search">
+            <input type="text" id="food-search" class="food-search" placeholder="Enter an ingredient" autofocus />
+            <h3 class="search-term">Search Term Displays Here</h3>
+            <div class="buttons"></div>
         </div>
-      </div>
-      <footer class="footer">2020 Taste Buds</footer>
-    </div>
-  </body>
-  <script src="js/app.js" type="module"></script>
+        <div class="suggested-pairings">
+            <h4 class="popular-pairings">Popular Pairings</h4>
+            <h2 class="legend"><span class="best">BEST - </span><span class="better">great - </span><span class="good">better - </span><span class="italics">good</span></h2>
+            <ul id="food-pairings" class="food-pairings"></ul>
+        </div>
+        <div class="flavor-affinities">
+            <h4 class="affinities-title">Flavor Affinities: Recipes & Ideas</h4>
+            <div class="flipcard-container" id="flipcard-container">
+            </div>
+            <div class="flavor-affinities">
+                <h4 class="affinities-title">Flavor Affinities: Recipes & Ideas</h4>
+                <div class="flipcard-container" id="flipcard-container">
+                </div>
+            </div>
+            <footer class="footer">2020 Taste Buds</footer>
+        </div>
+</body>
+<script src="js/app.js" type="module"></script>
+
 </html>
