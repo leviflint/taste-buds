@@ -1,6 +1,12 @@
 ### Get all posts
-GET localhost:8080/api/post
+GET localhost:8080/api/posts
 Accept: application/json
 
 ### Get post by id
 GET localhost:8080/api/post/42
+
+###
+POST localhost:8080/api/post
+Content-Type: application/json
+
+{"ingredient":"chicken" , "recipeName": "fried chicken", "recipeLink": "http://google.com",  "hashtag": "#yummmy",  "photo": "photo of food"}
