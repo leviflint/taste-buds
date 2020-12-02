@@ -1,4 +1,3 @@
-import { allPosts } from "./samplePostJSON.js"
 import {displayPosts} from "./post.js"
 
 

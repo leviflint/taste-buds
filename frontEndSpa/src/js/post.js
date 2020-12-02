@@ -1,11 +1,7 @@
-import { allPosts } from "./samplePostJSON.js"
-
-
-
 const displayPosts = function (allPosts) {
     const element = document.getElementById("search")
     const mainElemenet = document.createElement("div");
-    mainElemenet.classList.add("posts");
+    mainElemenet.id = ("posts");
     element.appendChild(mainElemenet);
 
     allPosts.forEach((post) => {
