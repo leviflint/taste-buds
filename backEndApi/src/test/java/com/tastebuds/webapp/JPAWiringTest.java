@@ -1,7 +1,9 @@
 package com.tastebuds.webapp;
 
+import com.tastebuds.webapp.Storage.PostRepository;
 import com.tastebuds.webapp.Storage.IngredientRepository;
 import com.tastebuds.webapp.Storage.PairingsRepository;
+import com.tastebuds.webapp.resources.Post;
 import com.tastebuds.webapp.resources.Ingredient;
 import com.tastebuds.webapp.resources.Pairing;
 import org.junit.jupiter.api.Test;
@@ -20,7 +22,8 @@ public class JPAWiringTest {
     private TestEntityManager entityManager;
     @Autowired
     private PairingsRepository pairingRepo;
-
+    @Autowired
+    private PostRepository blogRepo;
 
 
     private void flushClear() {
@@ -58,6 +61,13 @@ public class JPAWiringTest {
         flushClear();
         Pairing retrievePairings = pairingRepo.findById(testPairing1.getId()).get();
         assertThat(retrievePairings.getIngredients()).contains(testIngredient, testIngredient2);
+    }
+    @Test
+    public void saveBlogPost() {
+        Post testBlog = new Post("shrimp","Cajun Shrimp", "google.com", "#Creamy","img/Cajun Pasta.jpg");
+        blogRepo.save(testBlog);
+        Post retrieveBlog = blogRepo.findById(testBlog.getId()).get();
+        assertThat(retrieveBlog).isEqualTo(testBlog);
     }
 
 
