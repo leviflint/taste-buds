@@ -85,8 +85,7 @@
     -o-transform: rotatey(-180deg);
 }
 
-.flipCard .card .front,
-.post {
+.flipCard .card .front {
     font-family: 'Pacifico', cursive;
     font-size: 1.1em;
     text-align: center;

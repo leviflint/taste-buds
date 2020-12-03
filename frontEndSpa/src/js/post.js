@@ -46,4 +46,17 @@ const displayPosts = function(post) {
 
     return mainElemenet;
 }
+
+const populateDropDown = function(ingredients) {
+    let dropDownMenu = document.getElementById("dropdown");
+
+    ingredients.forEach((ingredient) => {
+        let ingredientOption = document.createElement("option")
+        ingredientOption.value = ingredient.ingredient;
+        ingredientOption.innerText = ingredient.ingredient;
+        dropDownMenu.appendChild(ingredientOption)
+    })
+}
+
 export { displayPosts }
+export { populateDropDown }

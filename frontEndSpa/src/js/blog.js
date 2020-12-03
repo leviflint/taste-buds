@@ -1,6 +1,7 @@
-import { displayPosts } from "./post.js"
-
-
+import {
+    displayPosts,
+    populateDropDown
+} from "./post.js"
 
 
 fetch("http://localhost:8080/api/posts", {
@@ -14,19 +15,7 @@ fetch("http://localhost:8080/api/posts", {
     .then((post) => displayPosts(post))
     .catch((error) => console.log(error));
 
-// displayPosts(post)
 
-
-// fetch(`http://localhost:8080/api/ingredient-name/${foodSearch.value}`, {
-//     method: "GET",
-//     mode: "cors",
-//     headers: {
-//         "Content-Type": "application/json",
-//     },
-// })
-// .then((response) => response.json())
-// .then((ingredient) => displayFilters(ingredient))
-// .catch((error) => console.log(error));
 
 
 
@@ -57,6 +46,17 @@ button.addEventListener("click", () => {
         })
         .then(response => response.json())
         .catch(err => console.error(err))
-        // .then(posts => displayPosts(posts))
         .then(location.reload());
 })
+
+
+fetch(`http://localhost:8080/api/ingredients`, {
+        method: "GET",
+        mode: "cors",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    })
+    .then((response) => response.json())
+    .then((ingredient) => populateDropDown(ingredient))
+    .catch((error) => console.log(error));
