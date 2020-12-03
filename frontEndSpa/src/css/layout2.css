@@ -1,12 +1,77 @@
+:root {
+    --black: rgb(38, 38, 38);
+    --orange: rgb(255, 127, 17);
+    --red: rgb(255, 27, 28);
+    --lightRed: rgb(250, 243, 243);
+    --beige: rgb(226, 232, 206);
+    --teal: rgb(59, 210, 230);
+    --laurel: rgb(197, 218, 188);
+    --white: rgb(255, 255, 255);
+    --acid: rgb(189, 191, 9);
+    --purple: rgb(209, 56, 191);
+}
+
 #posts {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-columns: repeat(auto-fit, 20rem);
+    justify-content: center;
+    row-gap: 30px;
+    column-gap: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
+
 img {
     width: 250px;
     height: 250px;
     object-fit: cover;
 }
+
 .post-text {
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+}
+
+.post {
+    font-family: 'Pacifico', cursive;
+    font-size: 0.8em;
+    text-align: center;
+    /* line-height: 100px; */
+    background-color: var(--teal);
+    border: 3px solid white;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+input {
+    border: 2px solid var(--red);
+    border-radius: 5px;
+    padding-left: 6px;
+}
+
+input[type=text] {
+    background-color: var(--lightRed);
+}
+
+input[placeholder] {
+    color: black;
+}
+
+#submit-post {
+    background-color: var(--red);
+    color: var(--lightRed);
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#submit-post,
+input[type=text],
+input[placeholder] {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 600;
+    font-size: large;
 }
