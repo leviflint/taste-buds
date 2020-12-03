@@ -1,14 +1,6 @@
-import { allIngredients } from "./sampleIngredientJSON.js";
-
-const mainView = document.querySelector(".container");
-
 const foodSearch = document.getElementById("food-search");
 
 const searchTerm = document.querySelector(".search-term");
-
-const filterButtonOne = document.getElementById("filter-button-one");
-const filterButtonTwo = document.getElementById("filter-button-two");
-const filterButtonThree = document.getElementById("filter-button-three");
 
 const suggestedPairings = document.querySelector(".suggested-pairings");
 
@@ -99,11 +91,15 @@ const displayAffinities = function(ingredient) {
     cardBack1.classList.add("back")
     card1.appendChild(cardBack1)
 
+    const anchorDiv1 = document.createElement("div")
+    anchorDiv1.classList.add("anchor-div")
+    cardBack1.appendChild(anchorDiv1)
+
     const cardRecipe1 = document.createElement("a")
     cardRecipe1.target = ("_blank")
     cardRecipe1.rel = ("noopener noreferrer")
     cardRecipe1.href = ingredient.affinity1Url
-    cardBack1.appendChild(cardRecipe1)
+    anchorDiv1.appendChild(cardRecipe1)
 
     const recipeImage1 = document.createElement("img")
     recipeImage1.src = ingredient.affinity1Photo
@@ -144,11 +140,15 @@ const displayAffinities = function(ingredient) {
     cardBack2.classList.add("back")
     card2.appendChild(cardBack2)
 
+    const anchorDiv2 = document.createElement("div")
+    anchorDiv2.classList.add("anchor-div")
+    cardBack2.appendChild(anchorDiv2)
+
     const cardRecipe2 = document.createElement("a")
     cardRecipe2.target = ("_blank")
     cardRecipe2.rel = ("noopener noreferrer")
     cardRecipe2.href = ingredient.affinity2Url
-    cardBack2.appendChild(cardRecipe2)
+    anchorDiv2.appendChild(cardRecipe2)
 
     const recipeImage2 = document.createElement("img")
     recipeImage2.src = ingredient.affinity2Photo
@@ -188,11 +188,15 @@ const displayAffinities = function(ingredient) {
     cardBack3.classList.add("back")
     card3.appendChild(cardBack3)
 
+    const anchorDiv3 = document.createElement("div")
+    anchorDiv3.classList.add("anchor-div")
+    cardBack3.appendChild(anchorDiv3)
+
     const cardRecipe3 = document.createElement("a")
     cardRecipe3.target = ("_blank")
     cardRecipe3.rel = ("noopener noreferrer")
     cardRecipe3.href = ingredient.affinity3Url
-    cardBack3.appendChild(cardRecipe3)
+    anchorDiv3.appendChild(cardRecipe3)
 
     const recipeImage3 = document.createElement("img")
     recipeImage3.src = ingredient.affinity3Photo

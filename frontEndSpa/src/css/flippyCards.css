@@ -26,10 +26,6 @@
 }
 
 .flipCard {
-    /* -webkit-perspective: 800;
-    -ms-perspective: 800;
-    -moz-perspective: 800;
-    -o-perspective: 800; */
      width: 300px;
      height: 350px;
      position: relative;
@@ -103,22 +99,29 @@
     overflow: hidden;
   }
 
+  .anchor-div {
+    scale: .8;
+  }
+
   #affinity-1-img {
     width: 300px;
     height: 350px;
     object-fit: cover;
+    padding: 0px 20px 10px 15px;
   }
 
   #affinity-2-img {
     width: 300px;
     height: 350px;
     object-fit: cover;
+    padding: 0px 20px 10px 15px;
   }
 
   #affinity-3-img {
     width: 300px;
     height: 350px;
     object-fit: cover;
+    padding: 0px 20px 10px 15px;
   }
 
 /* Hover effects for back of cards */
@@ -136,12 +139,12 @@
   
   .overlay {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
+    top: 0px;
+    bottom: 0px;
+    left: 13px;
+    right: 0px;
+    height: 94%;
+    width: 91%;
     opacity: 0;
     transition: .5s ease;
     background-color: var(--teal);
