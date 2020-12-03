@@ -86,6 +86,11 @@ const displayAffinities = function(ingredient) {
     cardFront1.innerText = ingredient.affinity1;
     card1.appendChild(cardFront1)
 
+    const flipSymbol = document.createElement("img")
+    flipSymbol.src = './img/flip.webp'
+    flipSymbol.classList.add("flip-symbol")
+    cardFront1.appendChild(flipSymbol)
+
     const cardBack1 = document.createElement("div")
     cardBack1.classList.add("side")
     cardBack1.classList.add("back")
@@ -135,6 +140,11 @@ const displayAffinities = function(ingredient) {
     cardFront2.innerText = ingredient.affinity2
     card2.appendChild(cardFront2)
 
+    const flipSymbol2 = document.createElement("img")
+    flipSymbol2.src = './img/flip.webp'
+    flipSymbol2.classList.add("flip-symbol")
+    cardFront2.appendChild(flipSymbol2)
+
     const cardBack2 = document.createElement("div")
     cardBack2.classList.add("side")
     cardBack2.classList.add("back")
@@ -182,6 +192,11 @@ const displayAffinities = function(ingredient) {
     cardFront3.id = ("affinity-3")
     cardFront3.innerText = ingredient.affinity3
     card3.appendChild(cardFront3)
+
+    const flipSymbol3 = document.createElement("img")
+    flipSymbol3.src = './img/flip.webp'
+    flipSymbol3.classList.add("flip-symbol")
+    cardFront3.appendChild(flipSymbol3)
 
     const cardBack3 = document.createElement("div")
     cardBack3.classList.add("side")

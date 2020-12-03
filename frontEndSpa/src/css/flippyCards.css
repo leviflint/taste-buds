@@ -57,7 +57,7 @@
   .flipCard .card .side {
     width: 100%;
     height: 100%;
-    cursor: pointer;
+    cursor: alias;
     position: absolute;
     box-sizing: border-box;
     z-index: 2;
@@ -84,6 +84,7 @@
     font-size: 1.1em;
     text-align: center;
     line-height: 100px;
+    padding-top: 20px;
     background-color: var(--teal);
     border: 3px solid white;
     color: white;
@@ -122,6 +123,15 @@
     height: 350px;
     object-fit: cover;
     padding: 0px 20px 10px 15px;
+  }
+
+  .flip-symbol {
+    scale: .15;
+    position: absolute;
+    top: -130px;
+    right: 0px;
+    bottom: 0px;
+    left: 64px;
   }
 
 /* Hover effects for back of cards */
