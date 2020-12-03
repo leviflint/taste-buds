@@ -9,4 +9,6 @@ public interface PairingsRepository extends CrudRepository<Pairing, Long> {
     List<Pairing> findAllByName(String pairing);
 
     Pairing findByName(String pairing);
+
+    List<Pairing> findByNameIgnoringCase(String butter);
 }

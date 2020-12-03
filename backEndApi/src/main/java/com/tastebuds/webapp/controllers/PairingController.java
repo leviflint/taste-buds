@@ -47,13 +47,10 @@ public class PairingController {
 
     @GetMapping("/api/pairings/{pairing}/ingredient")
     public Iterable<Ingredient> retrieveIngredientsAssociatedWithPairingByName(@PathVariable String pairing){
-       Pairing retrievedPairing = pairingStorage.retrievePairingByName(pairing);
+//       Pairing retrievedPairing = pairingStorage.retrievePairingByName(pairing);
 //       retrievedPairing.getName().equalsIgnoreCase(pairing);
 //        retrievedPairing.getName().compareTo(pairing)
-        return retrievedPairing.getIngredients()
-                .stream()
-                .filter(name -> retrievedPairing.getName().equalsIgnoreCase(pairing))
-                .collect(Collectors.toList());
+       return pairingStorage.retrieveIngredientsByPairingsName(pairing);
     }
 
 
