@@ -27,6 +27,7 @@ let linkInput = document.getElementById("link");
 let photoInput = document.getElementById("photo");
 
 
+
 button.addEventListener("click", () => {
     console.log("hello");
     console.log(ingredientInput, hashtagInput, recipeNameInput, linkInput, photoInput)
