@@ -96,6 +96,11 @@ const displayAffinities = function(ingredient) {
     cardBack1.classList.add("back")
     card1.appendChild(cardBack1)
 
+    const flipSymbolBack1 = document.createElement("img")
+    flipSymbolBack1.src = './img/flipBlack.webp'
+    flipSymbolBack1.classList.add("flip-symbol")
+    cardBack1.appendChild(flipSymbolBack1)
+
     const anchorDiv1 = document.createElement("div")
     anchorDiv1.classList.add("anchor-div")
     cardBack1.appendChild(anchorDiv1)
@@ -150,6 +155,11 @@ const displayAffinities = function(ingredient) {
     cardBack2.classList.add("back")
     card2.appendChild(cardBack2)
 
+    const flipSymbolBack2 = document.createElement("img")
+    flipSymbolBack2.src = './img/flipBlack.webp'
+    flipSymbolBack2.classList.add("flip-symbol")
+    cardBack2.appendChild(flipSymbolBack2)
+
     const anchorDiv2 = document.createElement("div")
     anchorDiv2.classList.add("anchor-div")
     cardBack2.appendChild(anchorDiv2)
@@ -202,6 +212,11 @@ const displayAffinities = function(ingredient) {
     cardBack3.classList.add("side")
     cardBack3.classList.add("back")
     card3.appendChild(cardBack3)
+
+    const flipSymbolBack3 = document.createElement("img")
+    flipSymbolBack3.src = './img/flipBlack.webp'
+    flipSymbolBack3.classList.add("flip-symbol")
+    cardBack3.appendChild(flipSymbolBack3)
 
     const anchorDiv3 = document.createElement("div")
     anchorDiv3.classList.add("anchor-div")
