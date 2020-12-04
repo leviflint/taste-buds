@@ -34,7 +34,7 @@ public class JPAWiringTest {
     }
     @Test
     public void shouldSaveAndRetrieveIngredientObjects() {
-        Ingredient testIngredient = new Ingredient("Lemon", "1", "2", "3","","","","","","");
+        Ingredient testIngredient = new Ingredient("salmon3", "nori,\n rice,\n soy sauce", "https://tinyurl.com/y2wj32vv", "https://tinyurl.com/y4rzgk5u", "asparagus,\n potatoes,\n butter", "https://tinyurl.com/y4qacr9x", "https://tinyurl.com/y6ft6bps", "lettuce,\n tomatoes,\n balsamic vinaigrette", "https://tinyurl.com/y594v45u", "https://tinyurl.com/yyvdl8we");
         ingredientRepo.save(testIngredient);
         flushClear();
         Ingredient retrievedIngredient = ingredientRepo.findById(testIngredient.getId()).get();
@@ -42,7 +42,7 @@ public class JPAWiringTest {
     }
     @Test
     public void ingredientsHaveManyPairings() {
-        Ingredient testIngredient = new Ingredient("chicken","1","2","3","","","","","","");
+        Ingredient testIngredient = new Ingredient("salmon", "nori,\n rice,\n soy sauce", "https://tinyurl.com/y2wj32vv", "https://tinyurl.com/y4rzgk5u", "asparagus,\n potatoes,\n butter", "https://tinyurl.com/y4qacr9x", "https://tinyurl.com/y6ft6bps", "lettuce,\n tomatoes,\n balsamic vinaigrette", "https://tinyurl.com/y594v45u", "https://tinyurl.com/yyvdl8we");
         ingredientRepo.save(testIngredient);
         Pairing testPairing1 = new Pairing("salt", Pairing.DietaryFilter.SALTY,2,testIngredient);
         pairingRepo.save(testPairing1);
@@ -54,9 +54,9 @@ public class JPAWiringTest {
     }
     @Test
     public void paringsCanHaveManyIngredients(){
-        Ingredient testIngredient = new Ingredient("toast","1","2","3","","","","","","");
+        Ingredient testIngredient = new Ingredient("salmon2", "nori,\n rice,\n soy sauce", "https://tinyurl.com/y2wj32vv", "https://tinyurl.com/y4rzgk5u", "asparagus,\n potatoes,\n butter", "https://tinyurl.com/y4qacr9x", "https://tinyurl.com/y6ft6bps", "lettuce,\n tomatoes,\n balsamic vinaigrette", "https://tinyurl.com/y594v45u", "https://tinyurl.com/yyvdl8we");
         ingredientRepo.save(testIngredient);
-        Ingredient testIngredient2 = new Ingredient("cinnamon","1","2","3","","","","","","");
+        Ingredient testIngredient2 = new Ingredient("salmon", "nori,\n rice,\n soy sauce", "https://tinyurl.com/y2wj32vv", "https://tinyurl.com/y4rzgk5u", "asparagus,\n potatoes,\n butter", "https://tinyurl.com/y4qacr9x", "https://tinyurl.com/y6ft6bps", "lettuce,\n tomatoes,\n balsamic vinaigrette", "https://tinyurl.com/y594v45u", "https://tinyurl.com/yyvdl8we");
         ingredientRepo.save(testIngredient2);
         Pairing testPairing1 = new Pairing( "butter", Pairing.DietaryFilter.BLAND,3, testIngredient, testIngredient2);
         pairingRepo.save(testPairing1);

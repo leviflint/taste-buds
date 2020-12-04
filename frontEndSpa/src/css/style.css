@@ -158,12 +158,11 @@ h4 {
 
 @keyframes slidein {
     from {
-        margin-left:100%;
-      }
-      
-      to {
-        margin-left:0%;
-      }
+        margin-left: 100%;
+    }
+    to {
+        margin-left: 0%;
+    }
 }
 
 .slideup {
@@ -177,7 +176,6 @@ h4 {
     from {
         margin-top: 100%;
     }
-
     to {
         margin-top: 0%;
     }
@@ -194,7 +192,6 @@ h4 {
     from {
         opacity: 0%;
     }
-
     to {
         opacity: 100%;
     }
