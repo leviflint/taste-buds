@@ -109,6 +109,7 @@ const displayPairings = function(pairings) {
 
         let modalTitle = document.createElement("h2");
         modalTitle.innerText = pairing.name;
+        modalTitle.classList.add("modal-title");
         innerDiv.appendChild(modalTitle)
         let modalList = document.createElement("ul");
         modalList.classList.add("modal-list");

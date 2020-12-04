@@ -270,6 +270,25 @@ footer {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+.modal-title {
+    display: gird;
+    max-width: 30%;
+    color: var(--orange);
+    padding-left: 42px;
+    border-bottom: solid;
+    border-color: var(--teal);
+    border-radius: 5px;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.inner-div {
+    text-align: center;
+}
+
 .modal-content {
     background-color: #fefefe;
     margin: auto;
