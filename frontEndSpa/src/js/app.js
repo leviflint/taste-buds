@@ -67,47 +67,71 @@ const displayFilters = function(ingredient) {
 };
 
 const displayPairings = function(pairings) {
-    pairings.forEach((pairings) => {
+    pairings.forEach((pairing) => {
         const pairingList = document.createElement("li");
-        if (pairings.textStyle == 1) {
+        if (pairing.textStyle == 1) {
             pairingList.style.fontWeight = "900";
         }
-        if (pairings.textStyle == 3) {
+        if (pairing.textStyle == 3) {
             pairingList.style.fontStyle = "italic";
         }
         foodPairingsUl.append(pairingList);
-        pairingList.innerText = pairings.name;
+        pairingList.innerText = pairing.name;
         pairingList.style.display = "inherit";
-        pairingList.id = `pairing${pairings.id}`
+        pairingList.id = `pairing${pairing.id}`
         suggestedPairings.classList.add("slidein");
 
         let outerDiv = document.createElement("div")
         outerDiv.classList.add("dropdown-content")
         outerDiv.classList.add("outer-div")
-        outerDiv.id = `modals${pairings.id}`
+        outerDiv.id = `modals${pairing.id}`
         pairingList.appendChild(outerDiv)
 
         let middleDiv = document.createElement("div")
         middleDiv.classList.add("modal")
         middleDiv.classList.add("middle-div")
-        middleDiv.id = `modal${pairings.id}`
+        middleDiv.id = `modal${pairing.id}`
         outerDiv.appendChild(middleDiv)
 
         let innerDiv = document.createElement("div")
         innerDiv.classList.add("modal-content")
         innerDiv.classList.add("inner-div")
-        innerDiv.id = `inner-div-${pairings.id}`
+        innerDiv.id = `inner-div-${pairing.id}`
         middleDiv.appendChild(innerDiv)
 
         let pairingSpan = document.createElement("span");
         pairingSpan.classList.add("close");
-        pairingSpan.id = `close${pairings.id}`;
+        pairingSpan.id = `close${pairing.id}`;
         pairingSpan.innerText = "ⓧ";
         innerDiv.appendChild(pairingSpan);
 
         let modalTitle = document.createElement("h2");
-        modalTitle.innerText = pairings.name;
+        modalTitle.innerText = pairing.name;
         innerDiv.appendChild(modalTitle)
+        let modalList = document.createElement("ul");
+        modalList.classList.add("modal-list");
+        innerDiv.appendChild(modalList);
+
+        fetch(`http://localhost:8080/api/pairings/${pairing.name}/ingredient`, {
+                method: "GET",
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+            .then((response) => response.json())
+
+        .catch((error) => console.log(error));
+
+        pairings.ingredients.forEach((ingredient) => {
+            let listedIngredient = document.createElement("li");
+            listedIngredient.innerText = ingredient.ingredient;
+
+            modalList.appendChild(listedIngredient);
+
+
+        })
+
 
 
         pairingList.onclick = function() {
