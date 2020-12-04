@@ -28,7 +28,7 @@ public class Populator implements CommandLineRunner {
     public void run(String... args) throws Exception{
         Ingredient chicken = new Ingredient("chicken","garlic,\n pasta,\n pesto", "https://tinyurl.com/y2medmvg", "https://tinyurl.com/y58d5mgj", "rice,\n beans,\n cheese", "https://tinyurl.com/yxfov8cu", "https://tinyurl.com/y3lh3uyd", "spinach,\n strawberry,\n poppy seed dressing", "https://tinyurl.com/yywdbdg2", "https://tinyurl.com/yyu3a2rf");
         ingredientStorage.saveIngredient(chicken);
-        Ingredient salmon = new Ingredient("salmon", "nori,\n rice,\n soysauce", "https://tinyurl.com/y2wj32vv", "https://tinyurl.com/y4rzgk5u", "asparagus,\n potatoes,\n butter", "https://tinyurl.com/y4qacr9x", "https://tinyurl.com/y6ft6bps", "lettuce,\n tomatoes,\n balsamic vinaigrette", "https://tinyurl.com/y594v45u", "https://tinyurl.com/yyvdl8we");
+        Ingredient salmon = new Ingredient("salmon", "nori,\n rice,\n soy sauce", "https://tinyurl.com/y2wj32vv", "https://tinyurl.com/y4rzgk5u", "asparagus,\n potatoes,\n butter", "https://tinyurl.com/y4qacr9x", "https://tinyurl.com/y6ft6bps", "lettuce,\n tomatoes,\n balsamic vinaigrette", "https://tinyurl.com/y594v45u", "https://tinyurl.com/yyvdl8we");
         ingredientStorage.saveIngredient(salmon);
         Ingredient steak = new Ingredient("steak", "butter,\n garlic,\n thyme", "https://tinyurl.com/y68sskcz", "https://tinyurl.com/yx9kftwf",  "baked potatoes,\n broccoli,\n mushrooms", "https://tinyurl.com/y4yeorzx", "https://tinyurl.com/y3x8hgyb", "shrimp,\n linguine,\n olive oil", "https://tinyurl.com/y3od6xll", "https://tinyurl.com/yygnmyfa");
         ingredientStorage.saveIngredient(steak);
@@ -42,7 +42,7 @@ public class Populator implements CommandLineRunner {
         ingredientStorage.saveIngredient(pork);
         Ingredient lamb = new Ingredient("lamb", "lettuce,\n pita,\n tomatoes", "https://tinyurl.com/y6nc95p8", "https://tinyurl.com/y6pcjhoh", "parsley,\n mint,\n rice", "https://tinyurl.com/yyczmjzu", "https://tinyurl.com/y4rxaw87", "tomato,\n potato,\n carrot", "https://tinyurl.com/y4mzx5dq", "https://tinyurl.com/y2ck77au");
         ingredientStorage.saveIngredient(lamb);
-        Ingredient seitan = new Ingredient("seitan", "rice,\n peppers,\n sessame oil", "https://tinyurl.com/y5fsnno2", "https://tinyurl.com/yyjc56lo", "mashed potatoes,\n gravy,\n mac n cheese", "https://tinyurl.com/y52kyh92", "https://tinyurl.com/yyemexne", "flour tortilla,\n lettuce,\n black beans", "https://tinyurl.com/y522kvds", "https://tinyurl.com/y2xfxklu");
+        Ingredient seitan = new Ingredient("seitan", "rice,\n peppers,\n sesame oil", "https://tinyurl.com/y5fsnno2", "https://tinyurl.com/yyjc56lo", "mashed potatoes,\n gravy,\n mac n cheese", "https://tinyurl.com/y52kyh92", "https://tinyurl.com/yyemexne", "flour tortilla,\n lettuce,\n black beans", "https://tinyurl.com/y522kvds", "https://tinyurl.com/y2xfxklu");
         ingredientStorage.saveIngredient(seitan);
         Ingredient tofu = new Ingredient("tofu", "general tso's,\n rice,\n broccoli", "https://tinyurl.com/ydhqxj44", "https://tinyurl.com/y5udk5mp", "carrot,\n zucchini,\n olive oil", "https://tinyurl.com/y3oxhont", "https://tinyurl.com/yxlh7rd3", "green onion,\n barbeque sauce,\n hash browns", "https://tinyurl.com/yyzdz2nd", "https://tinyurl.com/yyzaxc69");
         ingredientStorage.saveIngredient(tofu);

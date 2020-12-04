@@ -26,4 +26,5 @@ public class PostStorage {
     public Post retrieveById(Long id) {
         return postRepo.findById(id).get();
     }
+
 }
