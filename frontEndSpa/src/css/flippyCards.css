@@ -102,7 +102,7 @@
 }
 
   .anchor-div {
-    scale: .8;
+    transform: scale(.8);
   }
 
   #affinity-1-img {
@@ -127,7 +127,7 @@
   }
 
   .flip-symbol {
-    scale: .1;
+    transform: scale(.1);
     position: absolute;
     top: -135px;
     right: 0px;
