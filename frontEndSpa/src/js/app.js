@@ -66,6 +66,8 @@ const displayFilters = function(ingredient) {
     });
 };
 
+
+
 const displayPairings = function(pairings) {
     pairings.forEach((pairing) => {
         const pairingList = document.createElement("li");
@@ -111,6 +113,17 @@ const displayPairings = function(pairings) {
         let modalList = document.createElement("ul");
         modalList.classList.add("modal-list");
         innerDiv.appendChild(modalList);
+        let example = document.createElement("li")
+        example.innerText = "example";
+        modalList.appendChild(example);
+
+        let fillList = function(ingredient) {
+            ingredient.forEach((ingredient) => {
+                let modalIngredient = document.createElement("p")
+                modalIngredient.innerText = ingredient.ingredient
+                modalList.appendChild(modalIngredient)
+            })
+        }
 
         fetch(`http://localhost:8080/api/pairings/${pairing.name}/ingredient`, {
                 method: "GET",
@@ -120,19 +133,8 @@ const displayPairings = function(pairings) {
                 },
             })
             .then((response) => response.json())
-
-        .catch((error) => console.log(error));
-
-        pairings.ingredients.forEach((ingredient) => {
-            let listedIngredient = document.createElement("li");
-            listedIngredient.innerText = ingredient.ingredient;
-
-            modalList.appendChild(listedIngredient);
-
-
-        })
-
-
+            .then((ingredient) => fillList(ingredient))
+            .catch((error) => console.log(error));
 
         pairingList.onclick = function() {
             middleDiv.style.display = "block";
@@ -147,6 +149,8 @@ const displayPairings = function(pairings) {
                 middleDiv.style.display = "none";
             }
         };
+
+
     });
 };
 
@@ -373,6 +377,8 @@ foodSearch.addEventListener("keydown", function(event) {
             .then((response) => response.json())
             .then((ingredient) => displayAffinities(ingredient))
             .catch((error) => console.log(error));
+
+
 
         foodSearch.value = "";
     }
