@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
@@ -69,6 +71,22 @@ public class JPAWiringTest {
         Post retrieveBlog = blogRepo.findById(testBlog.getId()).get();
         assertThat(retrieveBlog).isEqualTo(testBlog);
     }
+    @Test
+    public void findByNameIgnoringCase(){
+        Ingredient testIngredient = new Ingredient("toast","1","2","3","","","","","","");
+        ingredientRepo.save(testIngredient);
+        Ingredient testIngredient2 = new Ingredient("cinnamon","1","2","3","","","","","","");
+        ingredientRepo.save(testIngredient2);
+        Pairing testPairing1 = new Pairing( "butter", Pairing.DietaryFilter.BLAND,3, testIngredient);
+        pairingRepo.save(testPairing1);
+        Pairing testPairing2 = new Pairing( "BUTTER", Pairing.DietaryFilter.BLAND,3, testIngredient2);
+        pairingRepo.save(testPairing2);
+        flushClear();
+        List <Pairing> retrieveList = pairingRepo.findByNameIgnoringCase("butter");
+        assertThat(retrieveList).contains(testPairing1, testPairing2);
+
+    }
+
 
 
 

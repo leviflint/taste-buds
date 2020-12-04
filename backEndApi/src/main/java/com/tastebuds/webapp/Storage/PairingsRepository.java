@@ -6,5 +6,9 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface PairingsRepository extends CrudRepository<Pairing, Long> {
-    List<Pairing> findByName(String pairing);
+    List<Pairing> findAllByName(String pairing);
+
+    Pairing findByName(String pairing);
+
+    List<Pairing> findByNameIgnoringCase(String butter);
 }
