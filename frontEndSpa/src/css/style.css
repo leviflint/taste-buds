@@ -32,7 +32,7 @@ header {
 
 body {
     background: url("../img/tasteBudsBKG.png");
-    background-size: contain;
+    /* background-size: contain; */
 }
 
 .container {
