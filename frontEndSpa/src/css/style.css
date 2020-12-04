@@ -271,22 +271,20 @@ footer {
 }
 
 .modal-title {
-    display: gird;
-    max-width: 30%;
+    display: grid;
     color: var(--orange);
-    padding-left: 42px;
     border-bottom: solid;
     border-color: var(--teal);
     border-radius: 5px;
     text-align: center;
     justify-self: center;
-    align-self: center;
-    align-content: center;
-    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .inner-div {
+    display: grid;
     text-align: center;
+    padding-bottom: 60px;
 }
 
 .modal-content {
@@ -294,13 +292,13 @@ footer {
     margin: auto;
     border: 1px solid #888;
     width: 90%;
-    max-width: 1000px;
+    max-width: 600px;
     border-radius: 10px;
 }
 
 .close {
     color: #aaaaaa;
-    float: right;
+    justify-self: right;
     font-size: 28px;
     font-weight: bold;
     padding-right: 20px;
