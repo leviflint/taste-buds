@@ -83,35 +83,46 @@ const displayPairings = function(pairings) {
 
         let outerDiv = document.createElement("div")
         outerDiv.classList.add("dropdown-content")
+        outerDiv.classList.add("outer-div")
         outerDiv.id = `modals${pairings.id}`
         pairingList.appendChild(outerDiv)
 
         let middleDiv = document.createElement("div")
+        middleDiv.classList.add("modal")
         middleDiv.classList.add("middle-div")
-        middleDiv.id = `middle-div-${pairings.id}`
+        middleDiv.id = `modal${pairings.id}`
         outerDiv.appendChild(middleDiv)
 
         let innerDiv = document.createElement("div")
+        innerDiv.classList.add("modal-content")
         innerDiv.classList.add("inner-div")
         innerDiv.id = `inner-div-${pairings.id}`
         middleDiv.appendChild(innerDiv)
 
-        let outerAlbumDiv = document.createElement("div");
-        outerAlbumDiv.classList.add("dropdown-content");
-        outerAlbumDiv.id = `modals${album.id}`;
-        mainElement.appendChild(outerAlbumDiv);
-        let albumDiv = document.createElement("div");
-        albumDiv.classList.add("modal");
-        albumDiv.id = `album-modal${album.id}`;
-        outerAlbumDiv.appendChild(albumDiv);
-        let innerAlbumDiv = document.createElement("div");
-        innerAlbumDiv.classList.add("modal-content");
-        albumDiv.appendChild(innerAlbumDiv);
-        let albumSpan = document.createElement("span");
-        albumSpan.classList.add("close");
-        albumSpan.id = `close${album.id}`;
-        albumSpan.innerText = "ⓧ";
-        innerAlbumDiv.appendChild(albumSpan);
+        let pairingSpan = document.createElement("span");
+        pairingSpan.classList.add("close");
+        pairingSpan.id = `close${pairings.id}`;
+        pairingSpan.innerText = "ⓧ";
+        innerDiv.appendChild(pairingSpan);
+
+        let modalTitle = document.createElement("h2");
+        modalTitle.innerText = pairings.name;
+        innerDiv.appendChild(modalTitle)
+
+
+        pairingList.onclick = function() {
+            middleDiv.style.display = "block";
+        };
+
+        pairingSpan.onclick = function() {
+            middleDiv.style.visibility = "hidden";
+        };
+
+        window.onclick = function(event) {
+            if (event.target == middleDiv) {
+                middleDiv.style.display = "none";
+            }
+        };
     });
 };
 
