@@ -78,6 +78,7 @@ const displayPairings = function(pairings) {
             pairingList.style.fontStyle = "italic";
         }
         foodPairingsUl.append(pairingList);
+        pairingList.classList.add("modal-button")
         pairingList.innerText = pairing.name;
         pairingList.style.display = "inherit";
         pairingList.id = `pairing${pairing.id}`

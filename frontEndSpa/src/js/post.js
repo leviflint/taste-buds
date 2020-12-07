@@ -11,6 +11,7 @@ const displayPosts = function(post) {
 
         let image = document.createElement("img");
         image.alt = ("photo");
+        image.classList.add(post - photo);
         image.src = indvPost.photo;
         outerDiv.appendChild(image);
 
