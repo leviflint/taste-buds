@@ -14,7 +14,7 @@ public class Pairing {
     private String name;
     private int textStyle;
     public enum DietaryFilter {
-        SWEET, SOUR , SALTY, BLAND, UMAMI, SMOKY
+        SWEET, SOUR , SALTY, BITTER, UMAMI, SMOKY
     }
     @GeneratedValue
     @Id

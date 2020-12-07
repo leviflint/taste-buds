@@ -83,9 +83,9 @@ public class Populator implements CommandLineRunner {
         Pairing normalRosemary = new Pairing("rosemary", Pairing.DietaryFilter.SWEET,1, pasta, tofu);
         pairingStorage.savePairing(normalRosemary);
 
-        Pairing capsButter = new Pairing("BUTTER", Pairing.DietaryFilter.BLAND,1, salmon, chicken, steak, pork, lamb);
+        Pairing capsButter = new Pairing("BUTTER", Pairing.DietaryFilter.UMAMI,1, salmon, chicken, steak, pork, lamb);
         pairingStorage.savePairing(capsButter);
-        Pairing boldButter = new Pairing("butter", Pairing.DietaryFilter.BLAND,1, shrimp, eggs, pasta);
+        Pairing boldButter = new Pairing("butter", Pairing.DietaryFilter.UMAMI,1, shrimp, eggs, pasta);
         pairingStorage.savePairing(boldButter);
 
         Pairing capsTomatoes = new Pairing("TOMATOES", Pairing.DietaryFilter.SWEET,1, chicken, shrimp, pasta, seitan);
@@ -121,10 +121,10 @@ public class Populator implements CommandLineRunner {
         Pairing normalMushroom = new Pairing("mushroom", Pairing.DietaryFilter.UMAMI,1, lamb, pork);
         pairingStorage.savePairing(normalMushroom);
 
-        Pairing normalRice = new Pairing("rice", Pairing.DietaryFilter.BLAND,2, steak, shrimp, eggs, pork);
-        pairingStorage.savePairing(normalRice);
-        Pairing boldRice = new Pairing("rice", Pairing.DietaryFilter.BLAND,1, chicken, salmon, lamb, seitan, tofu);
-        pairingStorage.savePairing(boldRice);
+//        Pairing normalRice = new Pairing("rice", Pairing.DietaryFilter.BLAND,2, steak, shrimp, eggs, pork);
+//        pairingStorage.savePairing(normalRice);
+//        Pairing boldRice = new Pairing("rice", Pairing.DietaryFilter.BLAND,1, chicken, salmon, lamb, seitan, tofu);
+//        pairingStorage.savePairing(boldRice);
 
 
 

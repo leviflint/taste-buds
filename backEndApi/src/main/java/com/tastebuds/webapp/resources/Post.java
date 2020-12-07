@@ -15,13 +15,15 @@ public class Post {
     private String recipeName;
     private String recipeLink;
     private String photo;
+    private String timeStamp;
 
-    public Post(String ingredient, String recipeName, String recipeLink, String hashtag, String photo) {
+    public Post(String ingredient, String recipeName, String recipeLink, String hashtag, String photo, String timeStamp) {
         this.hashtag = hashtag;
         this.recipeName = recipeName;
         this.recipeLink = recipeLink;
         this.photo = photo;
         this.ingredient = ingredient;
+        this.timeStamp = timeStamp;
     }
     protected Post(){
 
@@ -49,4 +51,6 @@ public class Post {
     public Long getId() {
         return id;
     }
+
+    public String getTimeStamp() {return timeStamp;}
 }
