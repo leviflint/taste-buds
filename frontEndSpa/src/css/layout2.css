@@ -17,6 +17,9 @@
     grid-template-rows: auto auto 50px;
     row-gap: 10px;
     text-align: center;
+    color: var(--red);
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 25px;
 }
 
 #posts {

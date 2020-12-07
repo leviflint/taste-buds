@@ -24,11 +24,11 @@ footer {
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
 }
 
 .search {
-    width: 70vw;
+    width: 70%;
     justify-self: center;
     align-self: center;
     justify-content: center;
@@ -41,12 +41,14 @@ footer {
     justify-self: center;
     align-self: center;
     place-items: center;
+    margin-bottom: 10px;
 }
 
 .flavor-affinities {
     width: 95%;
     justify-self: center;
     align-self: center;
+    margin-bottom: 10px;
 }
 
 .dropdown:hover .dropdown-content {
