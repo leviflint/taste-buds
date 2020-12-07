@@ -340,6 +340,7 @@ const displayAffinities = function (ingredient) {
 foodSearch.addEventListener("keydown", function (event) {
   if (event.code === "Enter") {
     searchTerm.innerText = foodSearch.value;
+    let searchFood = foodSearch.value.toLowerCase();
     searchTerm.style.display = "inherit";
     searchTerm.classList.add("fadein");
 
@@ -350,7 +351,7 @@ foodSearch.addEventListener("keydown", function (event) {
     flavorAffinities.classList.remove("slideup");
     suggestedPairings.style.display = "inherit";
 
-    fetch(`http://localhost:8080/api/ingredient-name/${foodSearch.value}`, {
+    fetch(`http://localhost:8080/api/ingredient-name/${searchFood}`, {
       method: "GET",
       mode: "cors",
       headers: {
@@ -361,7 +362,7 @@ foodSearch.addEventListener("keydown", function (event) {
       .then((ingredient) => displayFilters(ingredient))
       .catch((error) => console.log(error));
 
-    fetch(`http://localhost:8080/api/ingredient-name/${foodSearch.value}`, {
+    fetch(`http://localhost:8080/api/ingredient-name/${searchFood}`, {
       method: "GET",
       mode: "cors",
       headers: {
@@ -372,7 +373,7 @@ foodSearch.addEventListener("keydown", function (event) {
       .then((ingredient) => displayPairings(ingredient.pairings))
       .catch((error) => console.log(error));
 
-    fetch(`http://localhost:8080/api/ingredient-name/${foodSearch.value}`, {
+    fetch(`http://localhost:8080/api/ingredient-name/${searchFood}`, {
       method: "GET",
       mode: "cors",
       headers: {
