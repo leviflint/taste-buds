@@ -26,11 +26,11 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception{
-        Ingredient chicken = new Ingredient("chicken","garlic,\n pasta,\n pesto", "https://tinyurl.com/y2medmvg", "https://tinyurl.com/y58d5mgj", "rice,\n red beans,\n andouille sausage", "https://cooking.nytimes.com/recipes/1014363-spicy-red-beans-with-chicken-and-andouille-sausage", "https://static01.nyt.com/images/2012/11/28/dining/28BEANS6/28BEANS6-articleLarge-v3.jpg", "apples,\n endive,\n walnuts", "https://food52.com/recipes/15552-sage-roasted-chicken-with-endive-salad", "https://images.food52.com/WFwWUzvJGp0bQAz4eiVpINsYKo0=/1008x672/filters:format(webp)/115d1409-acbc-409b-81d6-79ac05402386--DSC_1837.jpg");
+        Ingredient chicken = new Ingredient("chicken","garlic,\n pasta,\n basil", "https://tinyurl.com/y2medmvg", "https://tinyurl.com/y58d5mgj", "rice,\n red beans,\n andouille sausage", "https://cooking.nytimes.com/recipes/1014363-spicy-red-beans-with-chicken-and-andouille-sausage", "https://static01.nyt.com/images/2012/11/28/dining/28BEANS6/28BEANS6-articleLarge-v3.jpg", "apples,\n endive,\n walnuts", "https://food52.com/recipes/15552-sage-roasted-chicken-with-endive-salad", "https://images.food52.com/WFwWUzvJGp0bQAz4eiVpINsYKo0=/1008x672/filters:format(webp)/115d1409-acbc-409b-81d6-79ac05402386--DSC_1837.jpg");
         ingredientStorage.saveIngredient(chicken);
         Ingredient salmon = new Ingredient("salmon", "nori,\n rice,\n soy sauce", "https://tinyurl.com/y2wj32vv", "https://tinyurl.com/y4rzgk5u", "asparagus,\n potatoes,\n butter", "https://tinyurl.com/y4qacr9x", "https://tinyurl.com/y6ft6bps", "cilantro,\n scallion,\n serrano pepper", "https://tinyurl.com/y594v45u", "https://tinyurl.com/yyvdl8we");
         ingredientStorage.saveIngredient(salmon);
-        Ingredient steak = new Ingredient("steak", "butter,\n garlic,\n thyme", "https://tinyurl.com/y68sskcz", "https://tinyurl.com/yx9kftwf",  "potatoes,\n red wine,\n rosemary", "https://www.jessicagavin.com/ribeye-steaks-red-wine-sauce/", "https://www.jessicagavin.com/wp-content/uploads/2018/06/ribeye-steak-with-red-wine-sauce-6-600x900.jpg", "shrimp,\n linguine,\n olive oil", "https://tinyurl.com/y3od6xll", "https://tinyurl.com/yygnmyfa");
+        Ingredient steak = new Ingredient("steak", "butter,\n garlic,\n thyme", "https://tinyurl.com/y68sskcz", "https://tinyurl.com/yx9kftwf",  "potatoes,\n red wine,\n rosemary", "https://www.jessicagavin.com/ribeye-steaks-red-wine-sauce/", "https://www.jessicagavin.com/wp-content/uploads/2018/06/ribeye-steak-with-red-wine-sauce-6-600x900.jpg", "shrimp,\n pasta,\n olive oil", "https://tinyurl.com/y3od6xll", "https://tinyurl.com/yygnmyfa");
         ingredientStorage.saveIngredient(steak);
         Ingredient shrimp = new Ingredient("shrimp", "oregano,\n paprika,\n cayenne pepper", "https://tinyurl.com/y5ujrtoz", "https://tinyurl.com/y3szxb9j", "chiles,\n lime juice,\n brown sugar", "https://tinyurl.com/y29nwouw", "https://tinyurl.com/yxvsj2sc", "horseradish,\n ketchup,\n lemon", "https://tinyurl.com/y5oy7874", "https://tinyurl.com/y3btumwp");
         ingredientStorage.saveIngredient(shrimp);
@@ -86,7 +86,7 @@ public class Populator implements CommandLineRunner {
 
         Pairing boldPotatoes = new Pairing("potatoes", Pairing.DietaryFilter.SWEET ,1, chicken, steak, pork, lamb);
         pairingStorage.savePairing(boldPotatoes);
-        Pairing capsPotatoes = new Pairing("POTATOES", Pairing.DietaryFilter.SWEET,1, eggs);
+        Pairing capsPotatoes = new Pairing("POTATOES", Pairing.DietaryFilter.SWEET,1, eggs, salmon);
         pairingStorage.savePairing(capsPotatoes);
 
         Pairing capsRosemary = new Pairing("ROSEMARY", Pairing.DietaryFilter.SWEET,1, chicken, steak, pork, lamb );
@@ -132,10 +132,108 @@ public class Populator implements CommandLineRunner {
         Pairing normalMushroom = new Pairing("mushroom", Pairing.DietaryFilter.UMAMI,1, lamb, pork);
         pairingStorage.savePairing(normalMushroom);
 
-//        Pairing normalRice = new Pairing("rice", Pairing.DietaryFilter.BLAND,2, steak, shrimp, eggs, pork);
-//        pairingStorage.savePairing(normalRice);
-//        Pairing boldRice = new Pairing("rice", Pairing.DietaryFilter.BLAND,1, chicken, salmon, lamb, seitan, tofu);
-//        pairingStorage.savePairing(boldRice);
+        Pairing normalRice = new Pairing("rice", Pairing.DietaryFilter.SWEET,2, steak, shrimp, eggs, pork);
+        pairingStorage.savePairing(normalRice);
+        Pairing boldRice = new Pairing("rice", Pairing.DietaryFilter.SWEET,1, chicken, salmon, lamb, seitan, tofu);
+        pairingStorage.savePairing(boldRice);
+
+        Pairing boldPasta = new Pairing("pasta", Pairing.DietaryFilter.SWEET, 1, chicken, steak, shrimp);
+        pairingStorage.savePairing(boldPasta);
+
+        Pairing normalRedBeans = new Pairing("red beans", Pairing.DietaryFilter.UMAMI, 2, chicken, pork);
+        pairingStorage.savePairing(normalRedBeans);
+
+        Pairing normalAndouilleSausage = new Pairing("andouille sausage", Pairing.DietaryFilter.SMOKY, 2, chicken, pork, shrimp, eggs, mushrooms, lentils);
+        pairingStorage.savePairing(normalAndouilleSausage);
+
+        Pairing boldApple = new Pairing("apple: fresh, juice, vinegar", Pairing.DietaryFilter.SWEET, 1, chicken, lamb);
+        pairingStorage.savePairing(boldApple);
+        Pairing capsApple = new Pairing("APPLE: fresh, juice, vinegar", Pairing.DietaryFilter.SWEET, 1, pork);
+        pairingStorage.savePairing(capsApple);
+
+        Pairing normalEndive = new Pairing("endive", Pairing.DietaryFilter.BITTER, 2, chicken, shrimp, mushrooms, salmon);
+        pairingStorage.savePairing(normalEndive);
+
+        Pairing normalWalnuts = new Pairing("walnuts", Pairing.DietaryFilter.BITTER, 2, chicken, lentils, pasta, chickpeas);
+        pairingStorage.savePairing(normalWalnuts);
+
+        Pairing normalNori = new Pairing("nori", Pairing.DietaryFilter.BITTER, 3, salmon, tofu, shrimp);
+        pairingStorage.savePairing(normalNori);
+
+        Pairing boldSoySauce = new Pairing("soy sauce", Pairing.DietaryFilter.SALTY, 1, salmon, chicken, steak, shrimp, tofu, seitan, mushrooms, pork);
+        pairingStorage.savePairing(boldSoySauce);
+
+        Pairing normalAsparagus = new Pairing("asparagus", Pairing.DietaryFilter.BITTER, 2, salmon, steak, shrimp, pasta, mushrooms);
+        pairingStorage.savePairing(normalAsparagus);
+
+        Pairing italicCilantro = new Pairing("cilantro", Pairing.DietaryFilter.SWEET, 3, pork, chicken, salmon, shrimp, lentils, lamb, eggplant);
+        pairingStorage.savePairing(italicCilantro);
+
+        Pairing normalScallion = new Pairing("scallion", Pairing.DietaryFilter.UMAMI, 2, pork, salmon, chicken, shrimp, tofu, seitan, chickpeas, eggplant, mushrooms, lentils);
+        pairingStorage.savePairing(normalScallion);
+
+        Pairing normalSerrano = new Pairing("serrano peppers", Pairing.DietaryFilter.SMOKY, 2, pork, salmon, chicken, shrimp, tofu, seitan, chickpeas, mushrooms, lentils);
+        pairingStorage.savePairing(normalSerrano);
+
+        Pairing normalThyme = new Pairing("thyme", Pairing.DietaryFilter.SWEET, 2, steak, chicken, lamb, shrimp, lentils, mushrooms, pasta, chickpeas, eggplant);
+        pairingStorage.savePairing(normalThyme);
+
+        Pairing boldRedWine = new Pairing("red wine", Pairing.DietaryFilter.SWEET, 1, steak, chicken, lamb, pork, mushrooms, pasta, eggplant, lentils);
+        pairingStorage.savePairing(boldRedWine);
+
+        Pairing capsOliveOil = new Pairing("OLIVE OIL", Pairing.DietaryFilter.BITTER, 1, chicken, lamb, steak, mushrooms, eggplant, pasta, lentils, tofu, pork, shrimp, mountainDew);
+        pairingStorage.savePairing(capsOliveOil);
+
+        Pairing normalOregano = new Pairing("oregano", Pairing.DietaryFilter.SWEET, 2, chicken, lamb, steak, mushrooms, eggplant, pasta, shrimp, pork);
+        pairingStorage.savePairing(normalOregano);
+
+        Pairing normalPaprika = new Pairing("paprika", Pairing.DietaryFilter.SMOKY, 2, chicken, lamb, shrimp, pork, pasta, chickpeas, eggplant, mushrooms);
+        pairingStorage.savePairing(normalPaprika);
+
+        Pairing italicChiles = new Pairing("chilies: cayenne, powder, crushed, etc.", Pairing.DietaryFilter.SMOKY, 3, chicken, lamb, shrimp, pork, pasta, chickpeas, eggplant, mushrooms);
+        pairingStorage.savePairing(italicChiles);
+
+        Pairing normalLime = new Pairing("lime: fresh, juice, zest", Pairing.DietaryFilter.SOUR, 2, mountainDew, shrimp, pork, chicken, salmon);
+        pairingStorage.savePairing(normalLime);
+
+        Pairing normalBrownSugar = new Pairing("brown sugar", Pairing.DietaryFilter.SWEET, 2, shrimp, seitan, tofu, pork, eggs);
+        pairingStorage.savePairing(normalBrownSugar);
+
+        Pairing italicHorseradish = new Pairing("horseradish", Pairing.DietaryFilter.SOUR, 3, shrimp, pork, steak, lamb);
+        pairingStorage.savePairing(italicHorseradish);
+
+        Pairing normalCheese = new Pairing("cheese: cheddar, Gruyere, mozzarella, cream cheese, etc.", Pairing.DietaryFilter.UMAMI, 2, chicken, pasta, eggplant, mushrooms, eggs, steak, mountainDew);
+        pairingStorage.savePairing(normalCheese);
+
+        Pairing normalVanilla = new Pairing("vanilla", Pairing.DietaryFilter.SWEET, 2, eggs, mountainDew);
+        pairingStorage.savePairing(normalVanilla);
+
+        Pairing normalPineapple = new Pairing("pineapple", Pairing.DietaryFilter.SWEET, 2, pork, shrimp, chicken, tofu, steak);
+        pairingStorage.savePairing(normalPineapple);
+
+        Pairing italicFennel = new Pairing("fennel", Pairing.DietaryFilter.BITTER, 3, pork, chicken, mushrooms, eggplant, salmon);
+        pairingStorage.savePairing(italicFennel);
+
+        Pairing normalParsley = new Pairing("parsley", Pairing.DietaryFilter.BITTER, 2, pork, chicken, shrimp, lamb, steak, mushrooms, eggplant, lentils);
+        pairingStorage.savePairing(normalParsley);
+
+        Pairing normalMint = new Pairing("mint", Pairing.DietaryFilter.SWEET, 2, eggplant, lentils, chickpeas, chicken);
+        pairingStorage.savePairing(normalMint);
+        Pairing boldMint = new Pairing("mint", Pairing.DietaryFilter.SWEET, 1, lamb);
+        pairingStorage.savePairing(boldMint);
+
+        Pairing normalPeas = new Pairing("peas", Pairing.DietaryFilter.SWEET, 2, lamb, chicken, lentils, mushrooms);
+        pairingStorage.savePairing(normalPeas);
+
+        Pairing normalCoriander = new Pairing("coriander", Pairing.DietaryFilter.SWEET, 2, seitan, chickpeas, eggplant, lentils, mushrooms);
+        pairingStorage.savePairing(normalCoriander);
+
+
+
+
+
+
+
 
 
 
