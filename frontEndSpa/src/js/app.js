@@ -57,7 +57,13 @@ const displayFilters = function (ingredient) {
   filterReset.classList.add("fadein");
   filterReset.style.display = "initial";
   buttons.appendChild(filterReset);
-  filterReset.addEventListener("click", () => {
+  filterReset.addEventListener("click", (e) => {
+    const buttonArray = Array.from(
+        document.querySelectorAll(".filter-button")
+      );
+      buttonArray.forEach((filterButton1) =>
+        filterButton1.classList.remove("filter-button-active")
+      );
     clearChildren(foodPairingsUl);
     suggestedPairings.style.display = "inherit";
 
