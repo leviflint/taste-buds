@@ -58,7 +58,7 @@ public class JPAWiringTest {
         ingredientRepo.save(testIngredient);
         Ingredient testIngredient2 = new Ingredient("salmon", "nori,\n rice,\n soy sauce", "https://tinyurl.com/y2wj32vv", "https://tinyurl.com/y4rzgk5u", "asparagus,\n potatoes,\n butter", "https://tinyurl.com/y4qacr9x", "https://tinyurl.com/y6ft6bps", "lettuce,\n tomatoes,\n balsamic vinaigrette", "https://tinyurl.com/y594v45u", "https://tinyurl.com/yyvdl8we");
         ingredientRepo.save(testIngredient2);
-        Pairing testPairing1 = new Pairing( "butter", Pairing.DietaryFilter.BLAND,3, testIngredient, testIngredient2);
+        Pairing testPairing1 = new Pairing( "butter", Pairing.DietaryFilter.BITTER,3, testIngredient, testIngredient2);
         pairingRepo.save(testPairing1);
         flushClear();
         Pairing retrievePairings = pairingRepo.findById(testPairing1.getId()).get();
@@ -66,7 +66,7 @@ public class JPAWiringTest {
     }
     @Test
     public void saveBlogPost() {
-        Post testBlog = new Post("shrimp","Cajun Shrimp", "google.com", "#Creamy","img/Cajun Pasta.jpg");
+        Post testBlog = new Post("shrimp","Cajun Shrimp", "google.com", "#Creamy","img/Cajun Pasta.jpg", "");
         blogRepo.save(testBlog);
         Post retrieveBlog = blogRepo.findById(testBlog.getId()).get();
         assertThat(retrieveBlog).isEqualTo(testBlog);
@@ -77,9 +77,9 @@ public class JPAWiringTest {
         ingredientRepo.save(testIngredient);
         Ingredient testIngredient2 = new Ingredient("cinnamon","1","2","3","","","","","","");
         ingredientRepo.save(testIngredient2);
-        Pairing testPairing1 = new Pairing( "butter", Pairing.DietaryFilter.BLAND,3, testIngredient);
+        Pairing testPairing1 = new Pairing( "butter", Pairing.DietaryFilter.BITTER,3, testIngredient);
         pairingRepo.save(testPairing1);
-        Pairing testPairing2 = new Pairing( "BUTTER", Pairing.DietaryFilter.BLAND,3, testIngredient2);
+        Pairing testPairing2 = new Pairing( "BUTTER", Pairing.DietaryFilter.BITTER,3, testIngredient2);
         pairingRepo.save(testPairing2);
         flushClear();
         List <Pairing> retrieveList = pairingRepo.findByNameIgnoringCase("butter");
