@@ -308,7 +308,8 @@ header h1 {
 
 /* Modals */
 
-.food-pairings:hover .dropdown-content {
+
+/* .food-pairings:hover .dropdown-content {
     display: block;
 }
 
@@ -367,7 +368,7 @@ header h1 {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-}
+} */
 
 #submit-post {
     cursor: pointer;
