@@ -91,78 +91,48 @@ const displayPairings = function(pairings) {
         pairingList.id = `pairing${pairing.id}`
         suggestedPairings.classList.add("slidein");
 
-        // let outerDiv = document.createElement("div")
-        // outerDiv.classList.add("dropdown-content")
-        // outerDiv.classList.add("outer-div")
-        // outerDiv.id = `modals${pairing.id}`
-        // pairingList.appendChild(outerDiv)
+        let outerDiv = document.createElement("div")
+        outerDiv.classList.add("dropdown-content")
+        outerDiv.classList.add("outer-div")
+        outerDiv.id = `modals${pairing.id}`
+        pairingList.appendChild(outerDiv)
 
-        // let middleDiv = document.createElement("div")
-        // middleDiv.classList.add("modal")
-        // middleDiv.classList.add("middle-div")
-        // middleDiv.id = `modal${pairing.id}`
-        // outerDiv.appendChild(middleDiv)
+        let middleDiv = document.createElement("div")
+        middleDiv.classList.add("modal")
+        middleDiv.classList.add("middle-div")
+        middleDiv.id = `modal${pairing.id}`
+        outerDiv.appendChild(middleDiv)
 
-        // let innerDiv = document.createElement("div")
-        // innerDiv.classList.add("modal-content")
-        // innerDiv.classList.add("inner-div")
-        // innerDiv.id = `inner-div-${pairing.id}`
-        // middleDiv.appendChild(innerDiv)
+        let innerDiv = document.createElement("div")
+        innerDiv.classList.add("modal-content")
+        innerDiv.classList.add("inner-div")
+        innerDiv.id = `inner-div-${pairing.id}`
+        middleDiv.appendChild(innerDiv)
 
-        // let pairingSpan = document.createElement("span");
-        // pairingSpan.classList.add("close");
-        // pairingSpan.id = `close${pairing.id}`;
-        // pairingSpan.innerText = "ⓧ";
-        // innerDiv.appendChild(pairingSpan);
+        let pairingSpan = document.createElement("span");
+        pairingSpan.classList.add("close");
+        pairingSpan.id = `close${pairing.id}`;
+        pairingSpan.innerText = "X";
+        innerDiv.appendChild(pairingSpan);
 
-        // let modalTitle = document.createElement("h2");
-        // modalTitle.innerText = pairing.name;
-        // modalTitle.classList.add("modal-title");
-        // innerDiv.appendChild(modalTitle)
-        // let modalList = document.createElement("ul");
-        // modalList.classList.add("modal-list");
-        // innerDiv.appendChild(modalList);
-        // let example = document.createElement("li")
-        // example.innerText = "example";
-        // modalList.appendChild(example);
+        let modalTitle = document.createElement("h2");
+        modalTitle.innerText = pairing.name;
+        modalTitle.classList.add("modal-title");
+        innerDiv.appendChild(modalTitle)
+        let modalList = document.createElement("ul");
+        modalList.classList.add("modal-list");
+        innerDiv.appendChild(modalList);
+        let example = document.createElement("li")
+        example.innerText = "example";
+        modalList.appendChild(example);
 
-        // let fillList = function(ingredient) {
-        //     ingredient.forEach((ingredient) => {
-        //         let modalIngredient = document.createElement("p")
-        //         modalIngredient.innerText = ingredient.ingredient
-        //         modalList.appendChild(modalIngredient)
-        //     })
-        // }
-
-        // fetch(`http://localhost:8080/api/pairings/${pairing.name}/ingredient`, {
-        //         method: "GET",
-        //         mode: "cors",
-        //         headers: {
-        //             "Content-Type": "application/json",
-        //         },
-        //     })
-        //     .then((response) => response.json())
-        //     .then((ingredient) => fillList(ingredient))
-        //     .catch((error) => console.log(error));
-
-        // pairingList.onclick = function() {
-        //     middleDiv.style.display = "block";
-        // };
-
-        // pairingSpan.onclick = function() {
-        //     middleDiv.style.visibility = "hidden";
-        // };
-
-        // window.onclick = function(event) {
-        //     if (event.target == middleDiv) {
-        //         middleDiv.style.display = "none";
-        //     }
-        // };
-    });
-};
-
-const displayAffinities = function(ingredient) {
-    // Card One
+        let fillList = function(ingredient) {
+            ingredient.forEach((ingredient) => {
+                let modalIngredient = document.createElement("p")
+                modalIngredient.innerText = ingredient.ingredient
+                modalList.appendChild(modalIngredient)
+            })
+        }
 
     const flipcard1 = document.createElement("div");
     flipcard1.classList.add("flipCard");
@@ -365,6 +335,14 @@ foodSearch.addEventListener("keydown", function(event) {
             .then((ingredient) => displayFilters(ingredient))
             .catch((error) => console.log(error));
 
+        function toggleModal() {
+          middleDiv.classList.toggle("show-modal")
+        }
+
+        pairingList.addEventListener("click", toggleModal)
+
+  });
+};
         fetch(`http://localhost:8080/api/ingredient-name/${searchFood}`, {
                 method: "GET",
                 mode: "cors",
