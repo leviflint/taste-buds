@@ -112,7 +112,7 @@ const displayPairings = function(pairings) {
         let pairingSpan = document.createElement("span");
         pairingSpan.classList.add("close");
         pairingSpan.id = `close${pairing.id}`;
-        pairingSpan.innerText = "ⓧ";
+        pairingSpan.innerText = "X";
         innerDiv.appendChild(pairingSpan);
 
         let modalTitle = document.createElement("h2");
@@ -145,26 +145,12 @@ const displayPairings = function(pairings) {
             .then((ingredient) => fillList(ingredient))
             .catch((error) => console.log(error));
 
-        pairingList.onclick = function() {
-            middleDiv.style.display = "block";
-        };
+        function toggleModal() {
+          middleDiv.classList.toggle("show-modal")
+        }
 
-        pairingSpan.onclick = function() {
-            middleDiv.style.visibility = "hidden";
-        };
+        pairingList.addEventListener("click", toggleModal)
 
-        window.onclick = function(event) {
-            if (event.target == middleDiv) {
-                middleDiv.style.display = "none";
-            }
-        };
-
-
-    window.onclick = function (event) {
-      if (event.target == middleDiv) {
-        middleDiv.style.display = "none";
-      }
-    };
   });
 };
 
