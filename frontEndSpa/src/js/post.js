@@ -41,7 +41,7 @@ const displayPosts = function(post) {
 
         let timestamp = document.createElement("p");
         timestamp.classList.add("timestamp");
-        timestamp.innerText = "12/2/2020";
+        timestamp.innerText = indvPost.timeStamp;
         innerDiv.appendChild(timestamp)
     });
 

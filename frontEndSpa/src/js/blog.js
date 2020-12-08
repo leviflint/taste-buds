@@ -26,7 +26,8 @@ let recipeNameInput = document.getElementById("recipe-name");
 let linkInput = document.getElementById("link");
 let photoInput = document.getElementById("photo");
 
-
+let today = new Date();
+let date = (today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear();
 
 button.addEventListener("click", () => {
     console.log("hello");
@@ -36,7 +37,8 @@ button.addEventListener("click", () => {
         "recipeName": recipeNameInput.value,
         "recipeLink": linkInput.value,
         "hashtag": hashtagInput.value,
-        "photo": photoInput.value
+        "photo": photoInput.value,
+        "timeStamp": date
     }
     fetch("http://localhost:8080/api/post", {
             method: 'POST',
