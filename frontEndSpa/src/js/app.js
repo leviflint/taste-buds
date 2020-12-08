@@ -146,8 +146,7 @@ const displayPairings = function (pairings) {
     pairingList.onclick = function () {
       middleDiv.style.display = "block";
     };
-
-<<<<<<< HEAD
+  });
 const displayPairings = function(pairings) {
     pairings.forEach((pairing) => {
         const pairingList = document.createElement("li");
@@ -232,11 +231,6 @@ const displayPairings = function(pairings) {
             }
         };
 
-=======
-    pairingSpan.onclick = function () {
-      middleDiv.style.visibility = "hidden";
-    };
->>>>>>> dev
 
     window.onclick = function (event) {
       if (event.target == middleDiv) {
@@ -480,3 +474,4 @@ const clearChildren = function (element) {
     element.removeChild(element.lastChild);
   }
 };
+}
