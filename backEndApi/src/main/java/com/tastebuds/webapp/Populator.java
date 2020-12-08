@@ -54,17 +54,17 @@ public class Populator implements CommandLineRunner {
         ingredientStorage.saveIngredient(mushrooms);
         Ingredient lentils = new Ingredient("lentils", "ginger,\n garam masala,\n cayenne", "https://www.allrecipes.com/recipe/12960/moroccan-lentil-soup/", "https://i.pinimg.com/originals/70/63/d2/7063d2962ac7b3b0ae994405eb051e9f.jpg", "coconut milk,\n ginger,\n coriander", "https://www.theendlessmeal.com/creamy-coconut-lentil-curry/", "https://www.theendlessmeal.com/wp-content/uploads/2016/07/Creamy-Coconut-Lentil-Curry-680-2.jpg", "tomato,\n turmeric,\n ginger", "https://www.epicurious.com/recipes/food/views/red-lentil-dal-101019", "https://assets.epicurious.com/photos/57c5aaf0d8f441e50948d295/master/pass/red-lentil-dal.jpg");
         ingredientStorage.saveIngredient(lentils);
-        Ingredient mountainDew = new Ingredient("Mountain Dew", "hot cheetos,\n mozzarella,\n olive oil", "https://www.insider.com/cookbook-review-mountain-dew-grilled-cheese-cupcakes-cocktails-2020", "https://i.insider.com/5fbbdb0732f2170011f70a03?width=700&format=jpeg&auto=webp", "lime,\n tequila,\n Midori", "https://copykat.com/copycat-red-lobster-dew-garita/", "https://copykat.com/wp-content/uploads/2020/11/Red-Lobster-Dew-Garita-Pin1.jpg", "cream cheese,\n vanilla,\n lemon", "https://www.tastemade.com/videos/mountain-dew-cheesecake", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzqkdSzLLxa9gL_51zGwWH13ufBmKEK-o0Og&usqp=CAU");
+        Ingredient mountainDew = new Ingredient("mountain dew", "hot Cheetos,\n mozzarella,\n olive oil", "https://www.insider.com/cookbook-review-mountain-dew-grilled-cheese-cupcakes-cocktails-2020", "https://i.insider.com/5fbbdb0732f2170011f70a03?width=700&format=jpeg&auto=webp", "lime,\n tequila,\n Midori", "https://copykat.com/copycat-red-lobster-dew-garita/", "https://copykat.com/wp-content/uploads/2020/11/Red-Lobster-Dew-Garita-Pin1.jpg", "cream cheese,\n vanilla,\n lemon", "https://www.tastemade.com/videos/mountain-dew-cheesecake", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzqkdSzLLxa9gL_51zGwWH13ufBmKEK-o0Og&usqp=CAU");
         ingredientStorage.saveIngredient(mountainDew);
 
 
 
 
-        Pairing boldLemon = new Pairing("lemon", Pairing.DietaryFilter.SOUR ,1,  chicken, salmon, shrimp);
+        Pairing boldLemon = new Pairing("lemon", Pairing.DietaryFilter.SOUR ,1,  chicken, salmon, shrimp, eggplant, chickpeas);
         pairingStorage.savePairing(boldLemon);
         Pairing normalLemon = new Pairing( "lemon" , Pairing.DietaryFilter.SOUR ,2, steak, pasta);
         pairingStorage.savePairing(normalLemon);
-        Pairing italicLemon = new Pairing("lemon",Pairing.DietaryFilter.SOUR ,1, pork, lamb, seitan, tofu);
+        Pairing italicLemon = new Pairing("lemon",Pairing.DietaryFilter.SOUR ,3, pork, lamb, seitan, tofu, mountainDew);
         pairingStorage.savePairing(italicLemon);
 
 
@@ -73,12 +73,12 @@ public class Populator implements CommandLineRunner {
         Pairing italicTeriyakiSauce = new Pairing("teriyaki sauce", Pairing.DietaryFilter.SALTY,3, eggs, lamb);
         pairingStorage.savePairing(italicTeriyakiSauce);
 
-        Pairing capsGarlic = new Pairing("GARLIC", Pairing.DietaryFilter.SWEET,1, chicken, steak, shrimp, pasta, lamb, tofu);
+        Pairing capsGarlic = new Pairing("GARLIC", Pairing.DietaryFilter.SWEET,1, chicken, steak, shrimp, pasta, lamb, tofu, chickpeas);
         pairingStorage.savePairing(capsGarlic);
         Pairing italicGarlic = new Pairing( "garlic", Pairing.DietaryFilter.SWEET,3, pork, seitan);
         pairingStorage.savePairing(italicGarlic);
 
-        Pairing capsOnions = new Pairing("ONIONS", Pairing.DietaryFilter.SWEET,1, chicken, steak, shrimp, pasta, eggs, lamb, seitan, pork, tofu);
+        Pairing capsOnions = new Pairing("ONIONS", Pairing.DietaryFilter.SWEET,1, chicken, steak, shrimp, pasta, eggs, lamb, seitan, pork, tofu, chickpeas, mushrooms);
         pairingStorage.savePairing(capsOnions);
 
         Pairing normalCumin = new Pairing("cumin", Pairing.DietaryFilter.SMOKY,2,chicken, steak, pork, lamb, tofu, seitan);
@@ -91,7 +91,7 @@ public class Populator implements CommandLineRunner {
 
         Pairing capsRosemary = new Pairing("ROSEMARY", Pairing.DietaryFilter.SWEET,1, chicken, steak, pork, lamb );
         pairingStorage.savePairing(capsRosemary);
-        Pairing normalRosemary = new Pairing("rosemary", Pairing.DietaryFilter.SWEET,1, pasta, tofu);
+        Pairing normalRosemary = new Pairing("rosemary", Pairing.DietaryFilter.SWEET,2, pasta, tofu);
         pairingStorage.savePairing(normalRosemary);
 
         Pairing capsButter = new Pairing("BUTTER", Pairing.DietaryFilter.UMAMI,1, salmon, chicken, steak, pork, lamb);
@@ -101,35 +101,34 @@ public class Populator implements CommandLineRunner {
 
         Pairing capsTomatoes = new Pairing("TOMATOES", Pairing.DietaryFilter.SWEET,1, chicken, shrimp, pasta, seitan);
         pairingStorage.savePairing(capsTomatoes);
-        Pairing normalTomatoes = new Pairing("tomatoes", Pairing.DietaryFilter.SWEET,1, eggs);
+        Pairing normalTomatoes = new Pairing("tomatoes", Pairing.DietaryFilter.SWEET,2, eggs);
         pairingStorage.savePairing(normalTomatoes);
 
         Pairing boldTomatoes = new Pairing("tomatoes", Pairing.DietaryFilter.SWEET,1, pork, lamb);
-
         pairingStorage.savePairing(boldTomatoes);
 
         Pairing capsBasil = new Pairing("BASIL", Pairing.DietaryFilter.SWEET,1, chicken, pasta, tofu);
         pairingStorage.savePairing(capsBasil);
-        Pairing italicsBasil = new Pairing("basil", Pairing.DietaryFilter.SWEET,1, eggs, seitan, lamb);
+        Pairing italicsBasil = new Pairing("basil", Pairing.DietaryFilter.SWEET,3, eggs, seitan, lamb, chickpeas);
         pairingStorage.savePairing(italicsBasil);
 
-        Pairing capsGinger = new Pairing("GINGER", Pairing.DietaryFilter.SOUR,1, chicken, salmon, pork );
+        Pairing capsGinger = new Pairing("GINGER", Pairing.DietaryFilter.SOUR,1, chicken, salmon, pork, tofu);
         pairingStorage.savePairing(capsGinger);
-        Pairing boldGinger = new Pairing("ginger", Pairing.DietaryFilter.SOUR,1, lamb);
+        Pairing boldGinger = new Pairing("ginger", Pairing.DietaryFilter.SOUR,1, lamb, lentils);
         pairingStorage.savePairing(boldGinger);
-        Pairing normalGinger = new Pairing("ginger", Pairing.DietaryFilter.SOUR,1, seitan);
+        Pairing normalGinger = new Pairing("ginger", Pairing.DietaryFilter.SOUR,2, seitan);
         pairingStorage.savePairing(normalGinger);
 
         Pairing boldBacon = new Pairing("bacon", Pairing.DietaryFilter.SALTY,1, chicken, shrimp, eggs, pasta);
         pairingStorage.savePairing(boldBacon);
-        Pairing normalBacon = new Pairing("bacon", Pairing.DietaryFilter.SALTY,1, lamb);
+        Pairing normalBacon = new Pairing("bacon", Pairing.DietaryFilter.SALTY,2, lamb);
         pairingStorage.savePairing(normalBacon);
 
         Pairing capsMushroom = new Pairing("MUSHROOMS", Pairing.DietaryFilter.UMAMI,1, chicken, eggs, pasta, seitan, tofu);
         pairingStorage.savePairing(capsMushroom);
         Pairing boldMushroom = new Pairing("mushrooms",Pairing.DietaryFilter.UMAMI,1, steak, shrimp);
         pairingStorage.savePairing(boldMushroom);
-        Pairing normalMushroom = new Pairing("mushroom", Pairing.DietaryFilter.UMAMI,1, lamb, pork);
+        Pairing normalMushroom = new Pairing("mushroom", Pairing.DietaryFilter.UMAMI,2, lamb, pork);
         pairingStorage.savePairing(normalMushroom);
 
         Pairing normalRice = new Pairing("rice", Pairing.DietaryFilter.SWEET,2, steak, shrimp, eggs, pork);
@@ -157,7 +156,7 @@ public class Populator implements CommandLineRunner {
         Pairing normalWalnuts = new Pairing("walnuts", Pairing.DietaryFilter.BITTER, 2, chicken, lentils, pasta, chickpeas);
         pairingStorage.savePairing(normalWalnuts);
 
-        Pairing normalNori = new Pairing("nori", Pairing.DietaryFilter.BITTER, 3, salmon, tofu, shrimp);
+        Pairing normalNori = new Pairing("nori", Pairing.DietaryFilter.BITTER, 2, salmon, tofu, shrimp);
         pairingStorage.savePairing(normalNori);
 
         Pairing boldSoySauce = new Pairing("soy sauce", Pairing.DietaryFilter.SALTY, 1, salmon, chicken, steak, shrimp, tofu, seitan, mushrooms, pork);
@@ -187,10 +186,10 @@ public class Populator implements CommandLineRunner {
         Pairing normalOregano = new Pairing("oregano", Pairing.DietaryFilter.SWEET, 2, chicken, lamb, steak, mushrooms, eggplant, pasta, shrimp, pork);
         pairingStorage.savePairing(normalOregano);
 
-        Pairing normalPaprika = new Pairing("paprika", Pairing.DietaryFilter.SMOKY, 2, chicken, lamb, shrimp, pork, pasta, chickpeas, eggplant, mushrooms);
+        Pairing normalPaprika = new Pairing("paprika", Pairing.DietaryFilter.SMOKY, 2, chicken, lamb, shrimp, pork, pasta, chickpeas, eggplant, mushrooms, tofu);
         pairingStorage.savePairing(normalPaprika);
 
-        Pairing italicChiles = new Pairing("chilies: cayenne, powder, crushed, etc.", Pairing.DietaryFilter.SMOKY, 3, chicken, lamb, shrimp, pork, pasta, chickpeas, eggplant, mushrooms);
+        Pairing italicChiles = new Pairing("chilies: cayenne, powder, crushed, etc.", Pairing.DietaryFilter.SMOKY, 3, chicken, lamb, shrimp, pork, pasta, chickpeas, eggplant, mushrooms, eggs, lentils);
         pairingStorage.savePairing(italicChiles);
 
         Pairing normalLime = new Pairing("lime: fresh, juice, zest", Pairing.DietaryFilter.SOUR, 2, mountainDew, shrimp, pork, chicken, salmon);
@@ -202,8 +201,14 @@ public class Populator implements CommandLineRunner {
         Pairing italicHorseradish = new Pairing("horseradish", Pairing.DietaryFilter.SOUR, 3, shrimp, pork, steak, lamb);
         pairingStorage.savePairing(italicHorseradish);
 
-        Pairing normalCheese = new Pairing("cheese: cheddar, Gruyere, mozzarella, cream cheese, etc.", Pairing.DietaryFilter.UMAMI, 2, chicken, pasta, eggplant, mushrooms, eggs, steak, mountainDew);
-        pairingStorage.savePairing(normalCheese);
+        Pairing normalCheddar = new Pairing("cheddar", Pairing.DietaryFilter.UMAMI, 2, chicken, pasta, mushrooms, eggs);
+        pairingStorage.savePairing(normalCheddar);
+        Pairing normalCreamCheese = new Pairing("cream cheese", Pairing.DietaryFilter.SWEET, 2, mountainDew, eggs, pasta);
+        pairingStorage.savePairing(normalCreamCheese);
+        Pairing boldMozzarella = new Pairing("mozzarella", Pairing.DietaryFilter.UMAMI, 1, chicken, mushrooms, eggplant, pasta, eggs);
+        pairingStorage.savePairing(boldMozzarella);
+        Pairing normalGruyere = new Pairing("Gruyere", Pairing.DietaryFilter.UMAMI, 2, pasta, chicken, mushrooms, eggs);
+        pairingStorage.savePairing(normalGruyere);
 
         Pairing normalVanilla = new Pairing("vanilla", Pairing.DietaryFilter.SWEET, 2, eggs, mountainDew);
         pairingStorage.savePairing(normalVanilla);
@@ -214,7 +219,7 @@ public class Populator implements CommandLineRunner {
         Pairing italicFennel = new Pairing("fennel", Pairing.DietaryFilter.BITTER, 3, pork, chicken, mushrooms, eggplant, salmon);
         pairingStorage.savePairing(italicFennel);
 
-        Pairing normalParsley = new Pairing("parsley", Pairing.DietaryFilter.BITTER, 2, pork, chicken, shrimp, lamb, steak, mushrooms, eggplant, lentils);
+        Pairing normalParsley = new Pairing("parsley", Pairing.DietaryFilter.BITTER, 2, pork, chicken, shrimp, lamb, steak, mushrooms, eggplant, lentils, chickpeas);
         pairingStorage.savePairing(normalParsley);
 
         Pairing normalMint = new Pairing("mint", Pairing.DietaryFilter.SWEET, 2, eggplant, lentils, chickpeas, chicken);
@@ -227,6 +232,61 @@ public class Populator implements CommandLineRunner {
 
         Pairing normalCoriander = new Pairing("coriander", Pairing.DietaryFilter.SWEET, 2, seitan, chickpeas, eggplant, lentils, mushrooms);
         pairingStorage.savePairing(normalCoriander);
+
+        Pairing normalCurryPowder = new Pairing("curry powder", Pairing.DietaryFilter.SMOKY, 2, seitan, tofu, chicken, eggplant, mushrooms, pork, shrimp);
+        pairingStorage.savePairing(normalCurryPowder);
+
+        Pairing normalSesame = new Pairing("sesame: seeds, oil", Pairing.DietaryFilter.UMAMI, 2, seitan, tofu, chicken, mushrooms, pork, shrimp, salmon);
+        pairingStorage.savePairing(normalSesame);
+
+        Pairing normalTurmeric = new Pairing("turmeric", Pairing.DietaryFilter.BITTER, 2, seitan, tofu, chicken, shrimp, eggplant, lamb, mushrooms);
+        pairingStorage.savePairing(normalTurmeric);
+
+        Pairing normalNutritionalYeast = new Pairing("nutritional yeast", Pairing.DietaryFilter.UMAMI, 2, seitan, tofu, eggplant, eggs, mushrooms);
+        pairingStorage.savePairing(normalNutritionalYeast);
+
+        Pairing normalTahini = new Pairing("tahini", Pairing.DietaryFilter.SWEET, 2, chickpeas, eggplant, mushrooms);
+        pairingStorage.savePairing(normalTahini);
+
+        Pairing normalDates = new Pairing("dates", Pairing.DietaryFilter.SWEET, 2, chickpeas, chicken, pork, lamb, pasta);
+        pairingStorage.savePairing(normalDates);
+
+        Pairing normalGaramMasala = new Pairing("garam masala", Pairing.DietaryFilter.SMOKY, 2, chickpeas, eggplant, chicken, tofu, seitan, mushrooms, lamb, lentils);
+        pairingStorage.savePairing(normalGaramMasala);
+
+        Pairing normalFenugreekLeaves = new Pairing("fenugreek leaves", Pairing.DietaryFilter.BITTER, 2, mushrooms, chicken, tofu, lentils, pork, eggplant);
+        pairingStorage.savePairing(normalFenugreekLeaves);
+
+        Pairing normalCashews = new Pairing("cashews", Pairing.DietaryFilter.SWEET, 2, mushrooms, chicken, tofu, seitan, mountainDew);
+        pairingStorage.savePairing(normalCashews);
+
+        Pairing normalSherry = new Pairing("sherry", Pairing.DietaryFilter.SWEET, 2, mushrooms, chicken, steak, pork, pasta);
+        pairingStorage.savePairing(normalSherry);
+
+        Pairing boldShallots = new Pairing("shallots", Pairing.DietaryFilter.SWEET, 1, mushrooms, chicken, pork, steak, pasta, tofu, seitan, lentils, eggplant, eggs);
+        pairingStorage.savePairing(boldShallots);
+
+        Pairing boldCoconutMilk = new Pairing("coconut milk", Pairing.DietaryFilter.SWEET, 1, lentils, shrimp, chicken, tofu, seitan, mushrooms);
+        pairingStorage.savePairing(boldCoconutMilk);
+
+        Pairing capsFlaminHotCheetos = new Pairing("FLAMIN' HOT CHEETOS", Pairing.DietaryFilter.SALTY, 1, mountainDew);
+        pairingStorage.savePairing(capsFlaminHotCheetos);
+
+        Pairing capsTequila = new Pairing("TEQUILA", Pairing.DietaryFilter.SWEET, 1, mountainDew);
+        pairingStorage.savePairing(capsTequila);
+
+        Pairing normalMidori = new Pairing("Midori", Pairing.DietaryFilter.SWEET, 2, mountainDew);
+        pairingStorage.savePairing(normalMidori);
+
+
+
+
+
+
+
+
+
+
 
 
 
