@@ -362,6 +362,11 @@ header h1 {
     border-radius: 10px;
 }
 
+.modal-list {
+    font-weight: 500; 
+    font-style: normal;
+}
+
 .close {
     color: #aaaaaa;
     justify-self: right;
