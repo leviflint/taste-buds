@@ -74,79 +74,7 @@ const displayFilters = function (ingredient) {
   });
 };
 
-const displayPairings = function (pairings) {
-  pairings.forEach((pairing) => {
-    const pairingList = document.createElement("li");
-    if (pairing.textStyle == 1) {
-      pairingList.style.fontWeight = "900";
-    }
-    if (pairing.textStyle == 3) {
-      pairingList.style.fontStyle = "italic";
-    }
-    foodPairingsUl.append(pairingList);
-    pairingList.innerText = pairing.name;
-    pairingList.style.display = "inherit";
-    pairingList.id = `pairing${pairing.id}`;
-    suggestedPairings.classList.add("slidein");
 
-    let outerDiv = document.createElement("div");
-    outerDiv.classList.add("dropdown-content");
-    outerDiv.classList.add("outer-div");
-    outerDiv.id = `modals${pairing.id}`;
-    pairingList.appendChild(outerDiv);
-
-    let middleDiv = document.createElement("div");
-    middleDiv.classList.add("modal");
-    middleDiv.classList.add("middle-div");
-    middleDiv.id = `modal${pairing.id}`;
-    outerDiv.appendChild(middleDiv);
-
-    let innerDiv = document.createElement("div");
-    innerDiv.classList.add("modal-content");
-    innerDiv.classList.add("inner-div");
-    innerDiv.id = `inner-div-${pairing.id}`;
-    middleDiv.appendChild(innerDiv);
-
-    let pairingSpan = document.createElement("span");
-    pairingSpan.classList.add("close");
-    pairingSpan.id = `close${pairing.id}`;
-    pairingSpan.innerText = "ⓧ";
-    innerDiv.appendChild(pairingSpan);
-
-    let modalTitle = document.createElement("h2");
-    modalTitle.innerText = pairing.name;
-    modalTitle.classList.add("modal-title");
-    innerDiv.appendChild(modalTitle);
-    let modalList = document.createElement("ul");
-    modalList.classList.add("modal-list");
-    innerDiv.appendChild(modalList);
-    let example = document.createElement("li");
-    example.innerText = "example";
-    modalList.appendChild(example);
-
-    let fillList = function (ingredient) {
-      ingredient.forEach((ingredient) => {
-        let modalIngredient = document.createElement("p");
-        modalIngredient.innerText = ingredient.ingredient;
-        modalList.appendChild(modalIngredient);
-      });
-    };
-
-    fetch(`http://localhost:8080/api/pairings/${pairing.name}/ingredient`, {
-      method: "GET",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((ingredient) => fillList(ingredient))
-      .catch((error) => console.log(error));
-
-    pairingList.onclick = function () {
-      middleDiv.style.display = "block";
-    };
-  });
 const displayPairings = function(pairings) {
     pairings.forEach((pairing) => {
         const pairingList = document.createElement("li");
@@ -230,13 +158,6 @@ const displayPairings = function(pairings) {
                 middleDiv.style.display = "none";
             }
         };
-
-
-    window.onclick = function (event) {
-      if (event.target == middleDiv) {
-        middleDiv.style.display = "none";
-      }
-    };
   });
 };
 
@@ -474,4 +395,3 @@ const clearChildren = function (element) {
     element.removeChild(element.lastChild);
   }
 };
-}
