@@ -1,4 +1,4 @@
-let ingredients = ["chicken", "salmon", "steak", "shrimp", "pasta", "eggs", "pork", "lamb", "seitan", "tofu", "chickpeas", "eggplant", "mushrooms", "lentils", "mountain dew"];
+let ingredients = ["chicken", "salmon", "steak", "shrimp", "pasta", "eggs", "pork", "lamb", "seitan", "tofu", "chickpeas", "eggplant", "mushrooms", "lentils", "mountain dew", "bananas", "apples" , "donut", "dates","fenugreek leaves", "grapes", "ham","iceberg lettuce", "java","kelp", "mango","nori","oats", "quail", "rice","turkey","umeboshi", "watermelon","xanthan gum","yam","zebra"];
       function autocomplete(inp, arr) {
   let currentFocus;
   inp.addEventListener("input", function(e) {
