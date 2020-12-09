@@ -14,37 +14,17 @@
     background: url(../img/tasteBudsBKGInverted.png);
 }
 
-.header-darkmode {
-    color: rgb(255, 255, 255);
-}
-
-.search-darkMode {
+.dark-background {
     background-color: var(--black);
 }
 
-.autocomplete-darkmode {
-    background-color: var(--black);
+.light-text {
+    color: var(--white);
 }
 
-.food-search-darkMode {
+.complete-switch {
     color: var(--white);
     background-color: var(--black);
-}
-
-.suggested-pairings-darkMode {
-    background-color: var(--black);
-}
-
-.flavor-affinities-darkMode {
-    background-color: var(--black);
-}
-
-.modal-content-darkMode {
-    background-color: var(--black);
-}
-
-.close-darkMode {
-    color: var(--white);
 }
 
 

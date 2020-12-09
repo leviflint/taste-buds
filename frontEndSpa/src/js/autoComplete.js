@@ -14,7 +14,7 @@ function autocomplete(inp, arr) {
         for (i = 0; i < arr.length; i++) {
             if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
                 b = document.createElement("DIV");
-                b.classList.add("auto-generated")
+                // b.classList.add("auto-generated")
                 b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
                 b.innerHTML += arr[i].substr(val.length);
                 b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
@@ -25,10 +25,10 @@ function autocomplete(inp, arr) {
                 a.appendChild(b);
             }
         }
-        const slider = document.getElementById("slider");
-        slider.addEventListener("change", () => {
-            b.classList.toggle("modal-dark")
-        })
+        // const slider = document.getElementById("slider");
+        // slider.addEventListener("change", () => {
+        //     b.classList.toggle("modal-dark")
+        // })
     });
     inp.addEventListener("keydown", function(e) {
         let x = document.getElementById(this.id + "autocomplete-list");

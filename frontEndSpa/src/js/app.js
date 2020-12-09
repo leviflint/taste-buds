@@ -109,32 +109,24 @@ const displayPairings = function(pairings) {
         innerDiv.id = `inner-div-${pairing.id}`
         middleDiv.appendChild(innerDiv)
 
-        // let contentDiv = document.createElement("div")
-        // contentDiv.classList.add("content")
-        // innerDiv.appendChild(contentDiv)
-
         let pairingSpan = document.createElement("span");
         pairingSpan.classList.add("close");
         pairingSpan.id = `close${pairing.id}`;
         pairingSpan.innerText = "X";
-        // contentDiv.appendChild(pairingSpan);
         innerDiv.appendChild(pairingSpan)
 
         let modalTitle = document.createElement("h2");
         modalTitle.innerText = pairing.name;
         modalTitle.classList.add("modal-title");
-        // contentDiv.appendChild(modalTitle)
         innerDiv.appendChild(modalTitle)
         let modalList = document.createElement("ul");
         modalList.classList.add("modal-list");
-        // contentDiv.appendChild(modalList);
         innerDiv.appendChild(modalList);
 
 
 
         const slider = document.getElementById("slider");
         slider.addEventListener("change", () => {
-            // contentDiv.classList.toggle("modal-dark")
             innerDiv.classList.toggle("modal-dark")
         })
 
