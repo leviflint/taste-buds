@@ -13,15 +13,16 @@ const sliderBlog = document.getElementById("slider-blog");
 const inspirationWall = document.getElementById("search")
 
 
+
 slider.addEventListener("change", () => {
     body.classList.toggle("body-darkMode")
     header.classList.toggle("header-darkmode")
     search.classList.toggle("search-darkMode")
-    // autoComplete.classList.toggle("autocomplete-darkmode")
+        // autoComplete.classList.toggle("autocomplete-darkmode")
     foodSearch.classList.toggle("food-search-darkMode")
     suggestedPairings.classList.toggle("suggested-pairings-darkMode")
     flavorAffinities.classList.toggle("flavor-affinities-darkMode")
-    // modalContent.classList.toggle("modal-content-darkMode")
+        // modalContent.classList.toggle("modal-content-darkMode")
     closeModalButton.classList.toggle("close-darkMode")
 })
 

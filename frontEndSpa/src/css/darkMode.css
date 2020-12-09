@@ -47,9 +47,16 @@
     color: var(--white);
 }
 
-/* Blog */ 
+
+/* Blog */
 
 .inspiration-wall-darkmode {
     background-color: var(--black);
 }
 
+.modal-dark {
+    background-color: var(--black);
+    display: grid;
+    text-align: center;
+    padding-bottom: 60px;
+}

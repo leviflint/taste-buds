@@ -236,7 +236,6 @@ header {
     text-shadow: 4px 4px 6px var(--teal, 1);
 }
 
-
 .nav {
     font-family: 'Pacifico', cursive;
     background-color: var(--orange);
@@ -300,7 +299,6 @@ header {
 
 /* Modals */
 
-
 .food-pairings:hover .dropdown-content {
     display: block;
 }
@@ -340,7 +338,7 @@ header {
     margin-bottom: 10px;
 }
 
-.inner-div {
+.content {
     display: grid;
     text-align: center;
     padding-bottom: 60px;
@@ -356,7 +354,7 @@ header {
 }
 
 .modal-list {
-    font-weight: 500; 
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -380,6 +378,7 @@ header {
     cursor: pointer;
 }
 
+
 /* Slider */
 
 .switch {
@@ -388,15 +387,21 @@ header {
     width: 60px;
     height: 34px;
     left: 150%;
-  }
-  /* Hide default HTML checkbox */
-  .switch input {
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  /* The slider */
-  .slider {
+}
+
+
+/* The slider */
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -406,8 +411,9 @@ header {
     background-color: var(--black);
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -417,22 +423,29 @@ header {
     background-color: var(--orange);
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  input:checked + .slider {
+}
+
+input:checked+.slider {
     background-color: var(--white);
-  }
-  input:focus + .slider {
+}
+
+input:focus+.slider {
     box-shadow: 0 0 1px #2196F3;
-  }
-  input:checked + .slider:before {
+}
+
+input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
-  /* Rounded sliders */
-  .slider.round {
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
     border-radius: 34px;
-  }
-  .slider.round:before {
+}
+
+.slider.round:before {
     border-radius: 50%;
-  }
+}
