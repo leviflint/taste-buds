@@ -1,3 +1,5 @@
+import { createAutofill } from "./autoComplete.js"
+
 const foodSearch = document.getElementById("food-search");
 
 const searchTerm = document.querySelector(".search-term");
@@ -10,6 +12,8 @@ const flavorAffinities = document.querySelector(".flavor-affinities");
 const flipcardContainer = document.getElementById("flipcard-container");
 const flavorAffinitiesUl = document.getElementById("flavor-affinities");
 const buttons = document.querySelector(".buttons");
+
+createAutofill();
 
 const displayFilters = function(ingredient) {
     let dietaryFilters = new Set();
