@@ -1,0 +1,55 @@
+:root {
+    --black: rgb(38, 38, 38);
+    --orange: rgb(255, 127, 17);
+    --red: rgb(255, 27, 28);
+    --beige: rgb(226, 232, 206);
+    --teal: rgb(59, 210, 230);
+    --laurel: rgb(197, 218, 188);
+    --white: rgb(255, 255, 255);
+    --acid: rgb(189, 191, 9);
+    --purple: rgb(209, 56, 191);
+}
+
+.body-darkMode {
+    background: url(../img/tasteBudsBKGInverted.png);
+}
+
+.header-darkmode {
+    color: rgb(255, 255, 255);
+}
+
+.search-darkMode {
+    background-color: var(--black);
+}
+
+.autocomplete-darkmode {
+    background-color: var(--black);
+}
+
+.food-search-darkMode {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.suggested-pairings-darkMode {
+    background-color: var(--black);
+}
+
+.flavor-affinities-darkMode {
+    background-color: var(--black);
+}
+
+.modal-content-darkMode {
+    background-color: var(--black);
+}
+
+.close-darkMode {
+    color: var(--white);
+}
+
+/* Blog */ 
+
+.inspiration-wall-darkmode {
+    background-color: var(--black);
+}
+
