@@ -47,6 +47,7 @@ h4 {
 }
 
 .food-search {
+    width: 95%;
     background-color: var(--white);
     border: none;
     font-size: 2em;

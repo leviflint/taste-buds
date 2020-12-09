@@ -8,18 +8,6 @@
     display: inline-block;
 }
 
-
-/* input {
-  border: 1px solid transparent;
-  background-color: #ffffff;
-  padding: 10px;
-  font-size: 16px;
-}
-input[type=text] {
-  background-color: #ffffff;
-  width: 100%;
-} */
-
 .autocomplete-items {
     position: absolute;
     border: 1px solid #d4d4d4;
@@ -32,11 +20,17 @@ input[type=text] {
     right: 0;
 }
 
-.autocomplete-items div {
+.light-auto {
     padding: 10px;
     cursor: pointer;
     background-color: #fff;
-    /* background-color: black; */
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.dark-auto {
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--black);
     border-bottom: 1px solid #d4d4d4;
 }
 

@@ -1,3 +1,5 @@
+import { createDarkAutofill } from "./autoComplete.js"
+
 const body = document.getElementById("body");
 const header = document.querySelector(".header");
 const search = document.querySelector(".search");
@@ -21,7 +23,8 @@ slider.addEventListener("change", () => {
     foodSearch.classList.toggle("complete-switch")
     suggestedPairings.classList.toggle("dark-background")
     flavorAffinities.classList.toggle("dark-background")
-    closeModalButton.classList.toggle("light-text")
+        // closeModalButton.classList.toggle("light-text")
+    createDarkAutofill();
 })
 
 // sliderBlog.addEventListener("change", () => {
