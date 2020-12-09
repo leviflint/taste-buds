@@ -1,13 +1,6 @@
 :root {
     --black: rgb(38, 38, 38);
-    --orange: rgb(255, 127, 17);
-    --red: rgb(255, 27, 28);
-    --beige: rgb(226, 232, 206);
-    --teal: rgb(59, 210, 230);
-    --laurel: rgb(197, 218, 188);
     --white: rgb(255, 255, 255);
-    --acid: rgb(189, 191, 9);
-    --purple: rgb(209, 56, 191);
 }
 
 .body-darkMode {
@@ -27,16 +20,16 @@
     background-color: var(--black);
 }
 
-
-/* Blog */
-
-.inspiration-wall-darkmode {
-    background-color: var(--black);
-}
-
 .modal-dark {
     background-color: var(--black);
     display: grid;
     text-align: center;
     padding-bottom: 60px;
+}
+
+
+/* Blog */
+
+.inspiration-wall-darkmode {
+    background-color: var(--black);
 }
