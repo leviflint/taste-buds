@@ -21,8 +21,6 @@ slider.addEventListener("change", () => {
     body.classList.toggle("body-darkMode")
     header.classList.toggle("light-text")
     dropdown.classList.toggle("dropdown-content-dark")
-    dropdownLinks.classList.toggle("dropdown-content-dark a")
-    dropdownHover.classList.toggle("dropdown-content-dark a:hover")
     search.classList.toggle("dark-background")
     foodSearch.classList.toggle("complete-switch")
     suggestedPairings.classList.toggle("dark-background")
