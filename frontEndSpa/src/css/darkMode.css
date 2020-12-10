@@ -27,6 +27,11 @@
     padding-bottom: 60px;
 }
 
+.input[type="text"] {
+    color: var(--white);
+    background-color: var(--black);
+}
+
 
 /* Blog */
 
