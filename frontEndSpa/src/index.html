@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="./css/flippyCards.css" class="stylesheet" />
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/xicon">
     <link rel="stylesheet" href="./css/autoComplete.css" class="stylesheet" />
+    <link rel="stylesheet" href="./css/darkMode.css" class="stylesheet">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taste Buds</title>
 </head>
 
-<body>
+<body id="body">
     <div class="container">
         <header>
             <div class="dropdown ">
@@ -29,16 +30,19 @@
                     <a href="https://dav-prog.github.io/" target="_blank" rel="noopener noreferrer">David Trimmer</a>
                 </div>
             </div>
-            <h1>Taste Buds</h1>
+            <h1 class="header">Taste Buds</h1>
             <a href="blog.html"><button class="nav">Blog</button></a>
+            <label class="switch">
+                <input type="checkbox" id="slider">
+                <span class="slider round"></span>
+              </label>
         </header>
-        
         <div class="search autocomplete" autocomplete="off" action="/action_page.php">
-            
+
             <input type="text" id="food-search" class="food-search" placeholder="Enter an ingredient" autofocus />
             <h3 class="search-term">Search Term Displays Here</h3>
             <div class="buttons"></div>
-    </div>
+        </div>
         <div class="suggested-pairings">
             <h4 class="popular-pairings">Popular Pairings</h4>
             <h2 class="legend"><span class="best">BEST - </span><span class="better">great - </span><span class="good">better - </span><span class="italics">good</span></h2>
@@ -54,5 +58,6 @@
 </body>
 
 <script src="js/app.js" type="module"></script>
-<script src="js/autoComplete.js" type="module"></script>
+<script src="js/darkMode.js" type="module"></script>
+
 </html>

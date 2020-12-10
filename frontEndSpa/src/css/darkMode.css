@@ -1,0 +1,40 @@
+:root {
+    --black: rgb(38, 38, 38);
+    --white: rgb(255, 255, 255);
+}
+
+.body-darkMode {
+    background: url(../img/tasteBudsBKGInverted.png);
+}
+
+.dark-background {
+    background-color: var(--black);
+}
+
+.light-text {
+    color: var(--white);
+}
+
+.complete-switch {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.modal-dark {
+    background-color: var(--black);
+    display: grid;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.input[type="text"] {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+
+/* Blog */
+
+.inspiration-wall-darkmode {
+    background-color: var(--black);
+}

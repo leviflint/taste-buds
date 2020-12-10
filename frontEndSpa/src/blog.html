@@ -4,14 +4,15 @@
 <head>
     <link rel="stylesheet" href="./css/style.css" class="stylesheet">
     <link rel="stylesheet" href="./css/layout.css" class="stylesheet">
-    <link rel="stylesheet" href="./css/layout2.css" class="stylesheet">
+    <link rel="stylesheet" href="./css/blog.css" class="stylesheet">
+    <link rel="stylesheet" href="./css/darkMode.css" class="stylesheet">
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/xicon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taste Buds</title>
 </head>
 
-<body>
+<body id="body">
     <div class="container-blog">
         <header>
             <div class="dropdown ">
@@ -28,8 +29,12 @@
                     <a href="https://dav-prog.github.io/" target="_blank" rel="noopener noreferrer">David Trimmer</a>
                 </div>
             </div>
-            <h1>Taste Buds</h1>
+            <h1 class="header">Taste Buds</h1>
             <a href="index.html"><button class="nav">Home</button></a>
+            <label class="switch">
+                <input type="checkbox" id="slider-blog">
+                <span class="slider round"></span>
+              </label>
         </header>
         <div class="search" id="search">
             <h3 class="inspiration-wall">Inspiration Wall</h3>
@@ -54,5 +59,5 @@
 
 </body>
 <script src="js/blog.js" type="module"></script>
-
+<script src="js/darkModeBlog.js" type="module"></script>
 </html>

@@ -12,13 +12,18 @@
 }
 
 .container-blog {
-    /* height: 100vh; */
     display: grid;
-    grid-template-rows: auto auto 50px;
+    grid-template-rows: auto auto auto 50px;
     row-gap: 10px;
     text-align: center;
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 25px;
+}
+
+.dark-mode {
+    grid-row-start: 2;
+    position: absolute;
+    top: 100px;
 }
 
 #posts {
