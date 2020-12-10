@@ -66,21 +66,29 @@ img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
+
+
 input,
 select {
     border: 2px solid var(--red);
     border-radius: 5px;
     padding-left: 6px;
+    margin-bottom: 2px;
 }
+
 
 input[type=text],
 select {
     background-color: var(--lightRed);
+    color: gray;
 }
+
 
 input[placeholder] {
     color: black;
 }
+
+
 
 #submit-post {
     background-color: var(--red);
@@ -96,7 +104,7 @@ input[placeholder],
 select {
     font-family: 'Darker Grotesque', sans-serif;
     font-weight: 600;
-    font-size: large;
+    font-size: x-large;
 }
 
 @media only screen and (max-width: 550px) {

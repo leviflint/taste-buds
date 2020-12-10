@@ -1,6 +1,7 @@
 :root {
     --black: rgb(38, 38, 38);
     --white: rgb(255, 255, 255);
+    --orange: rgb(255, 127, 17);
 }
 
 .body-darkMode {
@@ -13,6 +14,20 @@
 
 .light-text {
     color: var(--white);
+}
+
+.dropdown-content-dark{
+    background-color: var(--black);
+}
+
+.dropdown-content-dark a{
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.dropdown-content-dark a:hover{
+    background-color: var(--white);
+    color: var(--orange);
 }
 
 .complete-switch {
@@ -28,7 +43,7 @@
 }
 
 .input[type="text"] {
-    color: var(--white);
+    color: gray;
     background-color: var(--black);
 }
 

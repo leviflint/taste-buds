@@ -12,7 +12,7 @@ sliderBlog.addEventListener("change", () => {
     body.classList.toggle("body-darkMode")
     header.classList.toggle("light-text")
     inspirationWall.classList.toggle("inspiration-wall-darkmode")
-    dropdown.classList.toggle('complete-switch')
+    dropdown.classList.toggle('dark-background')
     hashtag.classList.toggle('input')
     recipe.classList.toggle('input')
     link.classList.toggle('input')

@@ -145,10 +145,14 @@ public class Populator implements CommandLineRunner {
         Pairing normalAndouilleSausage = new Pairing("andouille sausage", Pairing.DietaryFilter.SMOKY, 2, chicken, pork, shrimp, eggs, mushrooms, lentils);
         pairingStorage.savePairing(normalAndouilleSausage);
 
-        Pairing boldApple = new Pairing("apple: fresh, juice, vinegar", Pairing.DietaryFilter.SWEET, 1, chicken, lamb);
+        Pairing boldApple = new Pairing("apple: fresh, juice", Pairing.DietaryFilter.SWEET, 1, chicken, lamb);
         pairingStorage.savePairing(boldApple);
-        Pairing capsApple = new Pairing("APPLE: fresh, juice, vinegar", Pairing.DietaryFilter.SWEET, 1, pork);
+        Pairing capsApple = new Pairing("APPLE: fresh, juice", Pairing.DietaryFilter.SWEET, 1, pork);
         pairingStorage.savePairing(capsApple);
+        Pairing boldAppleCiderVinegar = new Pairing("apple cider vinegar", Pairing.DietaryFilter.SOUR, 1, chicken, tofu, shrimp);
+        pairingStorage.savePairing(boldAppleCiderVinegar);
+        Pairing capsAppleCiderVinegar = new Pairing("APPLE CIDER VINEGAR", Pairing.DietaryFilter.SOUR, 1, pork);
+        pairingStorage.savePairing(capsAppleCiderVinegar);
 
         Pairing normalEndive = new Pairing("endive", Pairing.DietaryFilter.BITTER, 2, chicken, shrimp, mushrooms, salmon);
         pairingStorage.savePairing(normalEndive);
@@ -189,7 +193,7 @@ public class Populator implements CommandLineRunner {
         Pairing normalPaprika = new Pairing("paprika", Pairing.DietaryFilter.SMOKY, 2, chicken, lamb, shrimp, pork, pasta, chickpeas, eggplant, mushrooms, tofu);
         pairingStorage.savePairing(normalPaprika);
 
-        Pairing italicChiles = new Pairing("chilies: cayenne, powder, crushed, etc.", Pairing.DietaryFilter.SMOKY, 3, chicken, lamb, shrimp, pork, pasta, chickpeas, eggplant, mushrooms, eggs, lentils);
+        Pairing italicChiles = new Pairing("chilies: powder, crushed", Pairing.DietaryFilter.SMOKY, 3, chicken, lamb, shrimp, pork, pasta, chickpeas, eggplant, mushrooms, eggs, lentils);
         pairingStorage.savePairing(italicChiles);
 
         Pairing normalLime = new Pairing("lime: fresh, juice, zest", Pairing.DietaryFilter.SOUR, 2, mountainDew, shrimp, pork, chicken, salmon);

@@ -43,13 +43,15 @@ footer {
   align-self: center;
   place-items: center;
   margin-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .flavor-affinities {
-  width: 95%;
+  width: 70%;
   justify-self: center;
   align-self: center;
   margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .dropdown:hover .dropdown-content {

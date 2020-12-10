@@ -1,5 +1,13 @@
 :root {
     --black: rgb(38, 38, 38);
+    --orange: rgb(255, 127, 17);
+    --red: rgb(255, 27, 28);
+    --beige: rgb(226, 232, 206);
+    --teal: rgb(59, 210, 230);
+    --laurel: rgb(197, 218, 188);
+    --white: rgb(255, 255, 255);
+    --acid: rgb(189, 191, 9);
+    --purple: rgb(209, 56, 191);
 }
 
 .autocomplete {
@@ -36,11 +44,12 @@
 
 .autocomplete-items div:hover {
     /*when hovering an item:*/
-    background-color: #e9e9e9;
+    background-color: var(--orange);
+    color: var(--white)
 }
 
 .autocomplete-active {
     /*when navigating through the items using the arrow keys:*/
-    background-color: DodgerBlue !important;
-    color: #ffffff;
+    background-color:var(--orange)!important;
+    color: var(--white);
 }
