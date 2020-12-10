@@ -3,12 +3,9 @@ import { createDarkAutofill } from "./autoComplete.js"
 const body = document.getElementById("body");
 const header = document.querySelector(".header");
 const search = document.querySelector(".search");
-const autoComplete = document.querySelector(".autocomplete-items")
 const foodSearch = document.querySelector(".food-search");
 const suggestedPairings = document.querySelector(".suggested-pairings");
 const flavorAffinities = document.querySelector(".flavor-affinities");
-const modalContent = document.querySelector(".modal-content");
-const closeModalButton = document.querySelector(".close");
 const slider = document.getElementById("slider");
 
 const sliderBlog = document.getElementById("slider-blog");
@@ -23,12 +20,11 @@ slider.addEventListener("change", () => {
     foodSearch.classList.toggle("complete-switch")
     suggestedPairings.classList.toggle("dark-background")
     flavorAffinities.classList.toggle("dark-background")
-        // closeModalButton.classList.toggle("light-text")
     createDarkAutofill();
 })
 
-// sliderBlog.addEventListener("change", () => {
-//     body.classList.toggle("body-darkMode")
-//     header.classList.toggle("header-darkmode")
-//     inspirationWall.classList.toggle("inspiration-wall-darkmode")
-// })
+sliderBlog.addEventListener("change", () => {
+    body.classList.toggle("body-darkMode")
+    header.classList.toggle("header-darkmode")
+    inspirationWall.classList.toggle("inspiration-wall-darkmode")
+})

@@ -12,7 +12,6 @@
 }
 
 .container-blog {
-    /* height: 100vh; */
     display: grid;
     grid-template-rows: auto auto auto 50px;
     row-gap: 10px;
